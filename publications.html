@@ -7,25 +7,150 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<style>
-			.publication-year { margin-top: 3em; border-bottom: 2px solid #2ecc71; padding-bottom: 0.5em; }
-			.publication-item { padding: 1.5em; margin: 1.5em 0; border-left: 3px solid #2ecc71; background: rgba(46, 204, 113, 0.05); transition: all 0.3s ease; }
-			.publication-item:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-			.publication-links { margin-top: 1em; }
-			.filter-buttons { margin: 2em 0; display: flex; flex-wrap: wrap; gap: 0.5em; }
-			@media (max-width: 768px) { .publication-item { padding: 1em; } }
+			/* Base Button Styling */
+			.button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				background: #1E90FF;  /* DodgerBlue */
+				color: #fff !important;
+				padding: 5px 10px;
+				font-size: 0.9em;
+				border: none;
+				border-radius: 4px;
+				text-decoration: none;
+				transition: background 0.3s ease;
+			}
+			.button:hover {
+				background: #187bcd;
+			}
+			
+			/* Global Styling */
+			body {
+				font-family: 'Montserrat', sans-serif;
+				background: #f4f4f9;
+				color: #333;
+				margin: 0;
+			}
+			
+			/* Header with Inline Navigation */
+			#header {
+				background: #0a2342;  /* Dark blue */
+				padding: 15px 40px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			#header .top-nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+			}
+			#header .top-nav ul li {
+				margin-left: 30px;
+			}
+			#header .top-nav ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 1em;
+				transition: color 0.3s ease;
+			}
+			#header .top-nav ul li a:hover {
+				color: #1E90FF;
+			}
+			
+			/* Main Wrapper */
+			.wrapper {
+				padding: 3em 40px;
+			}
+			
+			/* Page Heading */
+			.inner h2 {
+				text-align: center;
+				margin-bottom: 1em;
+			}
+			
+			/* Actions Section */
+			.actions {
+				text-align: center;
+				margin-bottom: 2em;
+			}
+			
+			/* Filter Buttons */
+			.filter-buttons {
+				margin: 2em 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.5em;
+			}
+			
+			/* Publication Year Section */
+			.publication-year {
+				margin-top: 3em;
+				border-bottom: 2px solid #1E90FF;
+				padding-bottom: 0.5em;
+			}
+			.publication-year h3 {
+				color: #0a2342;
+				margin: 0 0 1em;
+			}
+			
+			/* Publication Items */
+			.publication-item {
+				padding: 1.5em;
+				margin: 1.5em 0;
+				border-left: 3px solid #1E90FF;
+				background: rgba(30, 144, 255, 0.05);
+				transition: all 0.3s ease;
+			}
+			.publication-item:hover {
+				transform: translateX(5px);
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			}
+			.publication-item h4 {
+				margin-top: 0;
+				color: #0a2342;
+			}
+			.publication-item p {
+				margin: 0.5em 0 0;
+			}
+			.publication-item a.button.small {
+				margin-top: 0.5em;
+			}
+			
+			/* Responsive Adjustments */
+			@media (max-width: 768px) {
+				.publication-item {
+					padding: 1em;
+				}
+				.wrapper {
+					padding: 2em 20px;
+				}
+				#header {
+					padding: 10px 20px;
+				}
+				#header .top-nav ul li {
+					margin-left: 15px;
+				}
+			}
+			
+			/* Footer Styling */
+			.wrapper.style2.copyright {
+				background: #0a2342;
+				color: #aaa;
+				padding: 20px 0;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
-			<header id="header" class="alt">
-				<span class="logo"><a href="index.html">Vikas<span> Tiwari</span></a></span>
-				<a href="#menu"><span>Menu</span></a>
-			</header>
-
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
+			<!-- Header with Inline Navigation -->
+			<header id="header">
+				<nav class="top-nav">
+					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="research.html">Research</a></li>
 						<li><a href="publications.html">Publications</a></li>
@@ -33,14 +158,14 @@
 						<li><a href="teaching.html">PMRF Teaching</a></li>
 						<li><a href="gallery.html">Photo Gallery</a></li>
 					</ul>
-					<a class="close"><span>Close</span></a>
-				</div>
-			</nav>
+				</nav>
+			</header>
 
+			<!-- Main Content -->
 			<section class="wrapper">
 				<div class="inner">
 					<h2>Publications</h2>
-					<div class="actions" style="margin-bottom: 2em">
+					<div class="actions">
 						<a href="https://scholar.google.com/citations?hl=en&user=ZZ92ylMAAAAJ" 
 						   class="button icon solid fa-graduation-cap" 
 						   target="_blank">
