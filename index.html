@@ -36,30 +36,39 @@
 				margin: 0;
 			}
 			
-			/* Header with Inline Navigation */
+			/* Header with Navigation */
 			#header {
 				background: #0a2342;  /* Dark blue */
 				padding: 15px 40px;
 				display: flex;
-				justify-content: flex-end;
+				justify-content: space-between;
 				align-items: center;
+				position: relative;
 			}
-			#header .top-nav ul {
+			/* Hamburger menu icon (hidden on large screens) */
+			.menu-toggle {
+				display: none;
+				color: #fff;
+				font-size: 1.5em;
+				cursor: pointer;
+			}
+			/* Navigation list (visible on desktop) */
+			.top-nav ul {
 				list-style: none;
 				margin: 0;
 				padding: 0;
 				display: flex;
 			}
-			#header .top-nav ul li {
+			.top-nav ul li {
 				margin-left: 30px;
 			}
-			#header .top-nav ul li a {
+			.top-nav ul li a {
 				color: #fff;
 				text-decoration: none;
 				font-size: 1em;
 				transition: color 0.3s ease;
 			}
-			#header .top-nav ul li a:hover {
+			.top-nav ul li a:hover {
 				color: #1E90FF;
 			}
 			
@@ -163,23 +172,36 @@
 				text-align: center;
 			}
 			
-			/* Responsive Adjustments */
+			/* Mobile Navigation - Drop Down */
 			@media (max-width: 768px) {
-				/* Header: Stack navigation vertically */
 				#header {
-					flex-direction: column;
-					align-items: flex-start;
 					padding: 10px 20px;
+					flex-direction: row;
+					justify-content: space-between;
 				}
-				#header .top-nav ul {
+				.menu-toggle {
+					display: block;
+				}
+				.top-nav {
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					background: #0a2342;
+					display: none;
+					flex-direction: column;
+				}
+				.top-nav.active {
+					display: flex;
+				}
+				.top-nav ul {
 					flex-direction: column;
 					width: 100%;
-					margin-top: 10px;
 				}
-				#header .top-nav ul li {
-					margin: 8px 0;
+				.top-nav ul li {
+					margin: 10px 0;
+					text-align: center;
 				}
-				
 				/* Adjust banner text size and padding */
 				#banner {
 					padding: 70px 0;
@@ -210,9 +232,13 @@
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
-			<!-- Header with Inline Navigation (changes to vertical list on mobile) -->
+			<!-- Header with Hamburger Menu for Mobile -->
 			<header id="header">
-				<nav class="top-nav">
+				<div class="logo-placeholder"></div>
+				<div class="menu-toggle" id="menu-toggle">
+					<i class="fas fa-bars"></i>
+				</div>
+				<nav class="top-nav" id="top-nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="research.html">Research</a></li>
@@ -313,5 +339,13 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			// Toggle drop down menu on mobile
+			$(document).ready(function(){
+				$('#menu-toggle').click(function(){
+					$('#top-nav').toggleClass('active');
+				});
+			});
+		</script>
 	</body>
 </html>
