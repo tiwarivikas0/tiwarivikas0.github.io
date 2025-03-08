@@ -33,7 +33,7 @@
 				font-family: 'Montserrat', sans-serif;
 				background: #f4f4f9;
 				color: #333;
-				margin: 0;
+				margin: 0; /* Removed extra space */
 			}
 			
 			/* Header with Navigation */
@@ -70,6 +70,38 @@
 			}
 			.top-nav ul li a:hover {
 				color: #1E90FF;
+			}
+			
+			/* Mobile Navigation - Dropdown */
+			@media (max-width: 768px) {
+				#header {
+					padding: 10px 20px;
+				}
+				.menu-toggle {
+					display: block;
+				}
+				.top-nav {
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					background: #0a2342;
+					overflow: hidden;
+					/* For animation: we transition the max-height property */
+					transition: max-height 0.3s ease;
+					max-height: 0;
+				}
+				.top-nav.active {
+					max-height: 500px; /* Adjust this value as needed */
+				}
+				.top-nav ul {
+					flex-direction: column;
+					width: 100%;
+				}
+				.top-nav ul li {
+					margin: 10px 0;
+					text-align: center;
+				}
 			}
 			
 			/* Banner Styling */
@@ -172,36 +204,8 @@
 				text-align: center;
 			}
 			
-			/* Mobile Navigation - Drop Down */
+			/* Other Responsive Adjustments */
 			@media (max-width: 768px) {
-				#header {
-					padding: 10px 20px;
-					flex-direction: row;
-					justify-content: space-between;
-				}
-				.menu-toggle {
-					display: block;
-				}
-				.top-nav {
-					position: absolute;
-					top: 100%;
-					left: 0;
-					width: 100%;
-					background: #0a2342;
-					display: none;
-					flex-direction: column;
-				}
-				.top-nav.active {
-					display: flex;
-				}
-				.top-nav ul {
-					flex-direction: column;
-					width: 100%;
-				}
-				.top-nav ul li {
-					margin: 10px 0;
-					text-align: center;
-				}
 				/* Adjust banner text size and padding */
 				#banner {
 					padding: 70px 0;
@@ -340,10 +344,17 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-			// Toggle drop down menu on mobile
+			// Toggle dropdown on mobile when hamburger icon is clicked
 			$(document).ready(function(){
-				$('#menu-toggle').click(function(){
+				$('#menu-toggle').click(function(e){
+					e.stopPropagation(); // Prevent click from bubbling to document
 					$('#top-nav').toggleClass('active');
+				});
+				// Close dropdown when clicking outside of header
+				$(document).on('click', function(e) {
+					if(!$(e.target).closest('#header').length) {
+						$('#top-nav').removeClass('active');
+					}
 				});
 			});
 		</script>
