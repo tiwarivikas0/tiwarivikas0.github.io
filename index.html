@@ -442,32 +442,42 @@ Further, I leverage machine learning methods such as deepMD to model nanocluster
     </section>
   </div>
 
-  <!-- Updated Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#menu-toggle').click(function(e){
-        e.stopPropagation();
-        $('#top-nav').toggleClass('active');
-      });
-      $(document).on('click', function(e){
-        if(!$(e.target).closest('#header').length){
-          $('#top-nav').removeClass('active');
-        }
-      });
-
-      var headerHeight = $('#header').outerHeight();
-      $('#page-wrapper').css('padding-top', headerHeight + 'px');
-
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top - headerHeight
-          }, 1000);
-        }
-      });
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Increase z-index for header to ensure the dropdown is visible
+    $('#header').css('z-index', '1000');
+    
+    // Use both click and touchstart events
+    $('#menu-toggle').on('click touchstart', function(e){
+      e.preventDefault();
+      // Log event to debug if necessary
+      console.log("Menu toggle clicked");
+      $('#top-nav').toggleClass('active');
+      // Prevent further propagation if needed
+      e.stopPropagation();
     });
-  </script>
-</body>
+    
+    // Close the dropdown if clicking/tapping outside of the header
+    $(document).on('click touchstart', function(e){
+      if(!$(e.target).closest('#header').length){
+        $('#top-nav').removeClass('active');
+      }
+    });
+    
+    // Adjust padding-top of #page-wrapper based on header height
+    var headerHeight = $('#header').outerHeight();
+    $('#page-wrapper').css('padding-top', headerHeight + 'px');
+    
+    // Smooth scrolling for internal links
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if(target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - headerHeight
+        }, 1000);
+      }
+    });
+  });
+</script>
