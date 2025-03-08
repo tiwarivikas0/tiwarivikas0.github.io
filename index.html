@@ -51,86 +51,6 @@
       line-height: 1.6;
     }
 
-    /* Header Styling */
-    #header {
-      background: #0a2342;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      z-index: 1000;
-
-    }
-    .menu-toggle {
-      display: block;
-      color: #fff;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-    .top-nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #0a2342;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .top-nav.active {
-      max-height: 500px;
-    }
-    .top-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .top-nav ul li {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .top-nav ul li:last-child {
-      border-bottom: none;
-    }
-    .top-nav ul li a {
-      display: block;
-      padding: 15px;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .top-nav ul li a:hover {
-      background: #112a4b;
-    }
-
-    /* Responsive Navigation for Desktop */
-    @media (min-width: 768px) {
-      .menu-toggle {
-        display: none;
-      }
-      .top-nav {
-        display: block;
-        position: static;
-        max-height: none;
-        background: none;
-      }
-      .top-nav ul {
-        flex-direction: row;
-        justify-content: flex-end;
-      }
-      .top-nav ul li {
-        border-bottom: none;
-      }
-      .top-nav ul li a {
-        padding: 10px 15px;
-      }
-    }
-
     /* Banner Styling */
     #banner {
       position: relative;
@@ -328,40 +248,87 @@
       box-sizing: border-box;
     }
 
-    /* Updated Top Navigation for Mobile */
-    .top-nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #0a2342;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      margin: 0;
-      padding: 0;
-    }
+/* Header and Navigation common styles */
+#header {
+  background: #0a2342;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
 
-    /* Adjust padding on nav items */
-    .top-nav ul {
-      padding: 0;
-      margin: 0;
-    }
-    .top-nav ul li a {
-      padding: 15px;
-    }
+/* Mobile Navigation defaults */
+.top-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0a2342;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Responsive adjustments if needed */
-    @media (max-width: 768px) {
-      .top-nav {
-        padding: 0 10px;
-      }
-      html, body {
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-    }
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-nav ul li:last-child {
+  border-bottom: none;
+}
+
+.top-nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  background: #112a4b;
+}
+
+/* Desktop Navigation overrides */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  .top-nav {
+    display: block;
+    position: static;
+    max-height: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+  .top-nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .top-nav ul li {
+    border-bottom: none;
+    margin-left: 30px;
+  }
+  .top-nav ul li a {
+    padding: 10px 15px;
+  }
+}
   </style>
 </head>
 <body>
