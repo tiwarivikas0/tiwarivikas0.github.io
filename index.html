@@ -46,23 +46,26 @@
 				color: #333;
 			}
 			
-			/* Header with Unified Dropdown Navigation for All Devices */
+			/* Header with Unified Dropdown Navigation */
 			#header {
 				background: #0a2342;  /* Dark blue */
 				padding: 15px 40px;
 				display: flex;
-				justify-content: space-between;
+				justify-content: flex-end;
 				align-items: center;
 				position: relative;
 			}
-			/* Always show the hamburger icon */
+			/* Remove logo from top left by not including any logo element */
+			
+			/* Hamburger Icon - always visible */
 			.menu-toggle {
 				display: block;
 				color: #fff;
 				font-size: 1.5em;
 				cursor: pointer;
 			}
-			/* Navigation Dropdown: Hidden by default, toggled by hamburger */
+			
+			/* Navigation Dropdown: Hidden by default */
 			.top-nav {
 				position: absolute;
 				top: 100%;
@@ -74,7 +77,7 @@
 				max-height: 0;
 			}
 			.top-nav.active {
-				max-height: 500px; /* Adjust if more items are added */
+				max-height: 500px; /* Adjust as needed */
 			}
 			.top-nav ul {
 				list-style: none;
@@ -229,11 +232,9 @@
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
-			<!-- Header with Unified Dropdown Navigation -->
+			<!-- Header with Unified Dropdown Navigation (Logo removed) -->
 			<header id="header">
-				<!-- Optional logo placeholder -->
-				<div class="logo-placeholder" style="color:#fff; font-weight:700;">VIKAS TIWARI</div>
-				<!-- Hamburger Icon (always visible) -->
+				<!-- Hamburger Icon -->
 				<div class="menu-toggle" id="menu-toggle">
 					<i class="fas fa-bars"></i>
 				</div>
