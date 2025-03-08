@@ -32,36 +32,35 @@
 				font-family: 'Montserrat', sans-serif;
 				background: #f4f4f9;
 				color: #333;
+				margin: 0;
 			}
 
-			/* Header styling */
+			/* Header styling with inline navigation */
 			#header {
 				background: #0a2342;  /* Dark blue header */
-				padding: 20px 40px;
+				padding: 15px 40px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
 			}
-			#header .logo a {
+			/* Navigation links within header */
+			#header .top-nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+			}
+			#header .top-nav ul li {
+				margin-left: 30px;
+			}
+			#header .top-nav ul li a {
 				color: #fff;
-				font-size: 1.8em;
-				font-weight: 700;
 				text-decoration: none;
+				font-size: 1em;
+				transition: color 0.3s ease;
 			}
-
-			/* Navigation Menu styling */
-			#menu {
-				background: #fff;
-			}
-			#menu .inner {
-				padding: 40px;
-			}
-			#menu h2 {
-				font-size: 1.5em;
-				margin-bottom: 20px;
-			}
-			#menu .links li a {
-				font-size: 1.1em;
-				padding: 10px 0;
-				display: block;
-				color: #333;
+			#header .top-nav ul li a:hover {
+				color: #1E90FF;
 			}
 
 			/* Banner styling */
@@ -145,17 +144,10 @@
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
-			<!-- Header -->
+			<!-- Header with inline navigation -->
 			<header id="header" class="alt">
-				<span class="logo"><a href="index.html">Vikas<span> Tiwari</span></a></span>
-				<a href="#menu"><span>Menu</span></a>
-			</header>
-
-			<!-- Navigation Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
+				<nav class="top-nav">
+					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="research.html">Research</a></li>
 						<li><a href="publications.html">Publications</a></li>
@@ -163,9 +155,8 @@
 						<li><a href="teaching.html">PMRF Teaching</a></li>
 						<li><a href="gallery.html">Photo Gallery</a></li>
 					</ul>
-					<a class="close"><span>Close</span></a>
-				</div>
-			</nav>
+				</nav>
+			</header>
 
 			<!-- Banner Section -->
 			<section id="banner">
