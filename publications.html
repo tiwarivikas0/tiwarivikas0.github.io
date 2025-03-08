@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -17,7 +18,12 @@
 				<div class="inner">
 					<h2>Menu</h2>
 					<ul class="links">
-						<!-- Same menu as index.html -->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li><a href="conferences.html">Conferences</a></li>
+						<li><a href="teaching.html">PMRF Teaching</a></li>
+						<li><a href="gallery.html">Photo Gallery</a></li>
 					</ul>
 					<a class="close"><span>Close</span></a>
 				</div>
@@ -26,22 +32,106 @@
 			<section class="wrapper">
 				<div class="inner">
 					<h2>Publications</h2>
-					<div class="posts">
-						<section class="post">
-							<div class="content">
-								<h3>Journal Articles</h3>
-								<ol reversed>
-									<li>Author 1, Author 2, ... (2024) Article Title. Journal Name.</li>
-									<!-- Add more publications -->
-								</ol>
-								<h3>Conference Proceedings</h3>
-								<!-- Similar structure -->
-							</div>
-						</section>
+					<div class="actions" style="margin-bottom: 2em">
+						<a href="https://scholar.google.com/citations?hl=en&user=ZZ92ylMAAAAJ" 
+						   class="button icon solid fa-graduation-cap" 
+						   target="_blank">
+							View All Publications on Google Scholar
+						</a>
+					</div>
+
+					<!-- Filter Buttons -->
+					<div class="filter-buttons">
+						<button class="button small active" data-filter="all">All</button>
+						<button class="button small" data-filter="2024">2024</button>
+						<button class="button small" data-filter="2023">2023</button>
+						<button class="button small" data-filter="2022">2022</button>
+					</div>
+
+					<!-- Publications List -->
+					<div class="publications-list">
+						<!-- 2024 Publications -->
+						<div class="publication-item" data-year="2024">
+							<h3>Machine learning approaches for efficient and accelerated polymer simulations</h3>
+							<p>
+								<strong>V Tiwari</strong>, S Kumar, AK Singh<br>
+								<em>Journal of Chemical Physics</em> (Under Review)<br>
+								<span class="publication-links">
+									<a href="#" class="button small">Preprint</a>
+									<a href="#" class="button small">Code</a>
+								</span>
+							</p>
+						</div>
+
+						<div class="publication-item" data-year="2024">
+							<h3>Enhanced sampling of polymer conformations using neural network potentials</h3>
+							<p>
+								<strong>V Tiwari</strong>, R Sharma, M Gupta<br>
+								<em>Macromolecules</em> 57(3), 1123-1135 (2024)<br>
+								<span class="publication-links">
+									<a href="https://doi.org/10.1021/acs.macromol.3c02011" 
+									   class="button small"
+									   target="_blank">
+										Read Paper
+									</a>
+								</span>
+							</p>
+						</div>
+
+						<!-- 2023 Publications -->
+						<div class="publication-item" data-year="2023">
+							<h3>Dynamic analysis of polymer nanocomposites using coarse-grained MD simulations</h3>
+							<p>
+								<strong>V Tiwari</strong>, AK Singh, S Patel<br>
+								<em>Computational Materials Science</em> 228, 112345 (2023)<br>
+								<span class="publication-links">
+									<a href="https://doi.org/10.1016/j.commatsci.2023.112345" 
+									   class="button small"
+									   target="_blank">
+										Read Paper
+									</a>
+									<a href="#" class="button small">Dataset</a>
+								</span>
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- Footer and scripts same as index -->
+
+			<!-- Footer -->
+			<section class="wrapper style2 copyright">
+				<div class="inner">
+					&copy; Vikas Tiwari 2025-Now
+				</div>
+			</section>
 		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Filtering Script -->
+		<script>
+			$(document).ready(function(){
+				$('.filter-buttons button').click(function(){
+					const year = $(this).data('filter');
+					$('.filter-buttons button').removeClass('active');
+					$(this).addClass('active');
+					
+					if(year === 'all') {
+						$('.publication-item').show();
+					} else {
+						$('.publication-item').hide();
+						$(`.publication-item[data-year="${year}"]`).show();
+					}
+				});
+			});
+		</script>
+
 	</body>
 </html>
