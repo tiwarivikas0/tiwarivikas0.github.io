@@ -165,13 +165,21 @@
 			
 			/* Responsive Adjustments */
 			@media (max-width: 768px) {
-				/* Reduce header padding and spacing */
+				/* Header: Stack navigation vertically */
 				#header {
+					flex-direction: column;
+					align-items: flex-start;
 					padding: 10px 20px;
 				}
-				#header .top-nav ul li {
-					margin-left: 15px;
+				#header .top-nav ul {
+					flex-direction: column;
+					width: 100%;
+					margin-top: 10px;
 				}
+				#header .top-nav ul li {
+					margin: 8px 0;
+				}
+				
 				/* Adjust banner text size and padding */
 				#banner {
 					padding: 70px 0;
@@ -187,7 +195,7 @@
 				.wrapper {
 					padding: 2em 20px;
 				}
-				/* Stack feature items vertically if needed */
+				/* Stack feature items vertically */
 				.features {
 					flex-direction: column;
 					gap: 1.5em;
@@ -202,7 +210,7 @@
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
-			<!-- Header with Inline Navigation -->
+			<!-- Header with Inline Navigation (changes to vertical list on mobile) -->
 			<header id="header">
 				<nav class="top-nav">
 					<ul>
