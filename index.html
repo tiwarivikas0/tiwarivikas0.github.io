@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<style>
 			/* Base Button Styling */
 			.button {
@@ -101,7 +102,7 @@
 				margin-bottom: 1em;
 			}
 			
-			/* Features Section: Education & Achievements */
+			/* Education & Achievements Section */
 			.features {
 				display: flex;
 				flex-wrap: wrap;
@@ -126,7 +127,7 @@
 				line-height: 1.6;
 			}
 			
-			/* Social & Contact Buttons at the End */
+			/* Social & Contact Section */
 			.social-contact {
 				display: flex;
 				flex-wrap: wrap;
@@ -164,14 +165,37 @@
 			
 			/* Responsive Adjustments */
 			@media (max-width: 768px) {
-				.wrapper {
-					padding: 2em 20px;
-				}
+				/* Reduce header padding and spacing */
 				#header {
 					padding: 10px 20px;
 				}
 				#header .top-nav ul li {
 					margin-left: 15px;
+				}
+				/* Adjust banner text size and padding */
+				#banner {
+					padding: 70px 0;
+				}
+				#banner h1 {
+					font-size: 2.5em;
+				}
+				#banner p {
+					font-size: 1em;
+					margin-bottom: 30px;
+				}
+				/* Reduce wrapper padding */
+				.wrapper {
+					padding: 2em 20px;
+				}
+				/* Stack feature items vertically if needed */
+				.features {
+					flex-direction: column;
+					gap: 1.5em;
+				}
+				/* Adjust social/contact button font-size */
+				.social-contact a {
+					font-size: 0.9em;
+					padding: 8px 12px;
 				}
 			}
 		</style>
@@ -197,7 +221,7 @@
 				<div class="inner">
 					<h1>VIKAS TIWARI</h1>
 					<div class="content">
-						<p><strong>Researcher, IIT Delhi</strong><br/>
+						<p><strong>Researcher, Educator & Achiever</strong><br/>
 						MD simulations · Enhanced sampling · Machine learning</p>
 						<ul class="actions special">
 							<li><a href="#about" class="button large next">About</a></li>
@@ -225,15 +249,15 @@
 						<div class="feature-item">
 							<h3>Education</h3>
 							<p>
-								PhD in Computational chemistry – Indian Institute of Technology Delhi<br>
-								MSc in Chemistry – Indian Institute of Technology Delhi<br>
-								BSc in Chemistry – B. K. Birla College of Arts, Commerce and Science, Kalyan (w)
+								PhD in [Your Field] – Indian Institute of Technology Delhi<br>
+								MSc in [Your Field] – [Your University]<br>
+								BSc in [Your Field] – [Your University]
 							</p>
 						</div>
 						<div class="feature-item">
 							<h3>Achievements</h3>
 							<p>
-								Recipient of Prime Minister's research fellowship<br>
+								Recipient of [Award Name]<br>
 								[Number] Publications in peer-reviewed journals<br>
 								Selected Speaker at [Conference Name]
 							</p>
@@ -246,19 +270,19 @@
 			<section id="social-contact" class="wrapper">
 				<div class="inner">
 					<div class="social-contact">
-						<a href="https://www.linkedin.com/in/tiwarivikas0/" target="_blank">
+						<a href="https://www.linkedin.com/in/yourprofile" target="_blank">
 							<i class="fab fa-linkedin"></i>LinkedIn
 						</a>
-						<a href="https://X.com/tiwarivikas0" target="_blank">
+						<a href="https://twitter.com/yourprofile" target="_blank">
 							<i class="fab fa-twitter"></i>X
 						</a>
-						<a href="https://scholar.google.com/citations?user=ZZ92ylMAAAAJ&hl=en" target="_blank">
+						<a href="https://scholar.google.com/citations?user=yourprofile" target="_blank">
 							<i class="fas fa-graduation-cap"></i>Google Scholar
 						</a>
-						<a href="https://github.com/tiwarivikas0" target="_blank">
+						<a href="https://github.com/yourprofile" target="_blank">
 							<i class="fab fa-github"></i>GitHub
 						</a>
-						<a href="mailto:tvikas282@gmail.com">
+						<a href="mailto:your.email@example.com">
 							<i class="fas fa-envelope"></i>Contact
 						</a>
 					</div>
