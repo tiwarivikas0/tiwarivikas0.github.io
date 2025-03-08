@@ -10,6 +10,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<style>
+			/* Reset margin and padding for body and page wrapper */
+			body, #page-wrapper {
+				margin: 0;
+				padding: 0;
+			}
+			
 			/* Base Button Styling */
 			.button {
 				display: inline-flex;
@@ -33,7 +39,6 @@
 				font-family: 'Montserrat', sans-serif;
 				background: #f4f4f9;
 				color: #333;
-				margin: 0; /* Removed extra space */
 			}
 			
 			/* Header with Navigation */
@@ -87,12 +92,11 @@
 					width: 100%;
 					background: #0a2342;
 					overflow: hidden;
-					/* For animation: we transition the max-height property */
 					transition: max-height 0.3s ease;
 					max-height: 0;
 				}
 				.top-nav.active {
-					max-height: 500px; /* Adjust this value as needed */
+					max-height: 500px; /* Adjust as needed */
 				}
 				.top-nav ul {
 					flex-direction: column;
