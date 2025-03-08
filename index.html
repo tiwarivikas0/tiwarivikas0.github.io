@@ -58,7 +58,11 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      position: relative;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+
     }
     .menu-toggle {
       display: block;
@@ -340,7 +344,7 @@
     <!-- Banner -->
     <section id="banner">
       <h1>VIKAS TIWARI</h1>
-      <p><strong>Computational Chemist</strong><br>
+      <p><strong>COMPUTATIONAL CHEMIST</strong><br>
       MD simulations · Enhanced sampling · Machine learning</p>
       <div class="button-group">
         <a href="#about" class="button large">About</a>
@@ -437,7 +441,7 @@ Further, I leverage machine learning methods such as deepMD to model nanocluster
     </section>
   </div>
 
-  <!-- Scripts -->
+  <!-- Updated Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function(){
@@ -450,7 +454,19 @@ Further, I leverage machine learning methods such as deepMD to model nanocluster
           $('#top-nav').removeClass('active');
         }
       });
+
+      var headerHeight = $('#header').outerHeight();
+      $('#page-wrapper').css('padding-top', headerHeight + 'px');
+
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - headerHeight
+          }, 1000);
+        }
+      });
     });
   </script>
 </body>
-</html>
