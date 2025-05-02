@@ -1,39 +1,204 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Research - Vikas Tiwari</title>
-		<!-- Same head as index -->
-	</head>
-	<body class="is-preload">
-		<!-- Same header/menu structure -->
-		
-		<section class="wrapper">
-			<div class="inner">
-				<h2>Research Interests</h2>
-				<div class="features">
-					<section>
-						<h3>Molecular Dynamics</h3>
-						<p>Research description...</p>
-					</section>
-					<section>
-						<h3>Enhanced Sampling</h3>
-						<p>Research description...</p>
-					</section>
-					<!-- Add more research areas -->
-				</div>
-				
-				<h2>Projects</h2>
-				<div class="posts">
-					<article>
-						<div class="content">
-							<h3>Project Title</h3>
-							<p>Project description...</p>
-						</div>
-					</article>
-					<!-- Add more projects -->
-				</div>
-			</div>
-		</section>
-		<!-- Footer and scripts -->
-	</body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Research – Vikas Tiwari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="menu-toggle" class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="top-nav" id="top-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="wrapper">
+    <section class="section">
+      <div class="inner">
+        <h2 class="section-title">Research Overview</h2>
+        <p class="research-overview">
+          My research focuses on computational chemistry approaches to understand nanoscale phenomena. 
+          Combining molecular dynamics simulations with machine learning techniques, I investigate 
+          self-assembly processes, biomolecular interactions, and catalytic mechanisms at atomic resolution.
+        </p>
+
+        <!-- Research Interests -->
+        <div class="research-interests">
+          
+          <div class="research-item">
+            <h3>Nanocluster Self-Assembly</h3>
+            <p>
+              Investigating the thermodynamic drivers of metal nanocluster assembly using enhanced 
+              sampling techniques. Developing machine-learned potentials to simulate assembly pathways 
+              over extended timescales. Current work focuses on ligand-mediated assembly mechanisms 
+              and their response to environmental stimuli.
+            </p>
+            <a href="publications.html#nanocluster" class="button small">Related Publication</a>
+          </div>
+
+          <div class="research-item">
+            <h3>Biomolecule-Nanocluster Interactions</h3>
+            <p>
+              Characterizing interaction dynamics between proteins and monolayer-protected clusters 
+              through all-atom MD simulations. Developing collective variables to study binding 
+              thermodynamics and kinetics. Recent findings reveal sequence-dependent binding 
+              affinities with implications for biosensing applications.
+            </p>
+            <a href="publications.html#biomolecule" class="button small">Related Publication</a>
+          </div>
+
+          <div class="research-item">
+            <h3>Catalytic Reaction Mechanisms</h3>
+            <p>
+              Elucidating reaction pathways in heterogeneous catalysis using metadynamics. 
+              Current focus on copper-iron bimetallic systems for C-H activation. Developing 
+              hybrid QM/ML approaches to achieve DFT-level accuracy in large-scale simulations 
+              of catalytic cycles.
+            </p>
+            <a href="publications.html#catalysis" class="button small">Related Publication</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Conferences Section -->
+  <div class="wrapper">
+<section class="section">
+  <div class="inner">
+    <h2 class="section-title">Conferences & Presentations</h2>
+    
+    <div class="conference-list">
+      <!-- 2025 -->
+      <div class="conference-item">
+        <div class="conference-date">Feb 2025</div>
+        <div class="conference-details">
+          <h3>PMRF Symposium 2025</h3>
+          <p class="conference-location">IIT Hyderabad, India</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"Atomistic Details of Nanocluster Formation from Machine-Learned Potential-based Simulations"</p>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="conference-item">
+        <div class="conference-date">Oct 2024</div>
+        <div class="conference-details">
+          <h3>Physical Chemistry Symposium 2024</h3>
+          <p class="conference-location">IIT Bombay, India</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"Modeling Enzyme-like Catalytic Reaction on Ligand-protected Metal Nanoclusters"</p>
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-date">Sept 2024</div>
+        <div class="conference-details">
+          <h3>AsiaNANO Conference</h3>
+          <p class="conference-location">IIT Madras, Chennai, India</p>
+          <p class="presentation-type">Oral presentation</p>
+          <p class="presentation-title">"Dynamics and Self-Assembly of Atomically Precise Nanoclusters"</p>
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-date">Aug 2024</div>
+        <div class="conference-details">
+          <h3>ACS Fall Meeting 2024</h3>
+          <p class="conference-location">Global Virtual Symposia (Online)</p>
+          <p class="presentation-type">Oral presentation</p>
+          <p class="presentation-title">"Modeling Enzyme-like Catalytic Reaction on Ligand-protected Metal Nanoclusters"</p>
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-date">Feb 2024</div>
+        <div class="conference-details">
+          <h3>MD@60 JNCASR-CECAM International Conference</h3>
+          <p class="conference-location">JNCASR, Bengaluru, India</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"Investigating Enzyme-like Photocatalytic Oxidation on Ligand-protected Metal Nanoclusters"</p>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="conference-item">
+        <div class="conference-date">July 2023</div>
+        <div class="conference-details">
+          <h3>Enhanced Sampling Workshop</h3>
+          <p class="conference-location">CECAM-HQ-EPFL, Lausanne, Switzerland</p>
+          <p class="presentation-type">Workshop Attendee</p>
+          <p class="presentation-title">"Hands-on training in PLUMED enhanced sampling techniques"</p>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="conference-item">
+        <div class="conference-date">Dec 2022</div>
+        <div class="conference-details">
+          <h3>CFOS-2022</h3>
+          <p class="conference-location">IIT Roorkee, India</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"DFT study of pTSA catalyzed Friedel Craft's reaction revealing concerted mechanism along with cooperative effect of HFIP"</p>
+        </div>
+      </div>
+
+      <div class="conference-item">
+        <div class="conference-date">Nov 2022</div>
+        <div class="conference-details">
+          <h3>IGWYR-2022</h3>
+          <p class="conference-location">IIT Delhi, India</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"DFT study of pTSA catalyzed Friedel Craft's reaction revealing concerted mechanism along with cooperative effect of HFIP"</p>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="conference-item">
+        <div class="conference-date">Dec 2021</div>
+        <div class="conference-details">
+          <h3>MMM-II Conference</h3>
+          <p class="conference-location">NISER Bhubaneswar (Online)</p>
+          <p class="presentation-type">Poster presentation</p>
+          <p class="presentation-title">"NaCl as catalyst and water as solvent: Highly E-selective olefination of methyl-substituted N-heteroarenes with benzyl amines and alcohols"</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      © Vikas Tiwari 2025–Now | Department of Chemistry, IIT Delhi
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>

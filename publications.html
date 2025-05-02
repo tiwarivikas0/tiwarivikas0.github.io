@@ -1,248 +1,64 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-  <title>Publications - Vikas Tiwari</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Publications – Vikas Tiwari</title>
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* Global Styles */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-    html, body, #page-wrapper {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f4f4f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    
-    /* Header Styling */
-    #header {
-      background: #0a2342;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      z-index: 100;
-    }
-    .menu-toggle {
-      display: block;
-      color: #fff;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-    
-    /* Mobile Navigation Defaults */
-    .top-nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #0a2342;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      margin: 0;
-      padding: 0;
-    }
-    .top-nav.active {
-      max-height: 500px;
-    }
-    .top-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .top-nav ul li {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .top-nav ul li:last-child {
-      border-bottom: none;
-    }
-    .top-nav ul li a {
-      display: block;
-      padding: 15px;
-      color: #fff;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .top-nav ul li a:hover {
-      background: #112a4b;
-    }
-    
-    /* Desktop Navigation Overrides */
-    @media (min-width: 768px) {
-      .menu-toggle {
-        display: none;
-      }
-      .top-nav {
-        display: block;
-        position: static;
-        max-height: none;
-        background: none;
-      }
-      .top-nav ul {
-        flex-direction: row;
-        justify-content: flex-end;
-      }
-      .top-nav ul li {
-        border-bottom: none;
-        margin-left: 30px;
-      }
-      .top-nav ul li a {
-        padding: 10px 15px;
-      }
-    }
-    
-    /* Main Wrapper */
-    .wrapper {
-      padding: 3em 40px;
-      margin-top: 80px; /* space for fixed header */
-    }
-    .inner h2 {
-      text-align: center;
-      margin-bottom: 1em;
-      color: #0a2342;
-    }
-    
-    /* Actions Section */
-    .actions {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #0a2342;
-      color: #fff !important;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .button:hover {
-      background: #112a4b;
-      transform: translateY(-2px);
-    }
-    .button.small {
-      padding: 5px 10px;
-      font-size: 0.9em;
-    }
-    
-    /* Filter Buttons */
-    .filter-buttons {
-      margin: 2em 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5em;
-    }
-    
-    /* Publication Year Section */
-    .publication-year {
-      margin-top: 3em;
-      border-bottom: 2px solid #0a2342;
-      padding-bottom: 0.5em;
-    }
-    .publication-year h3 {
-      color: #0a2342;
-      margin: 0 0 1em;
-    }
-    
-    /* Publication Items */
-    .publication-item {
-      padding: 1.5em;
-      margin: 1.5em 0;
-      border-left: 3px solid #0a2342;
-      background: rgba(10, 35, 66, 0.05);
-      transition: all 0.3s ease;
-    }
-    .publication-item:hover {
-      transform: translateX(5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .publication-item h4 {
-      margin-top: 0;
-      color: #0a2342;
-    }
-    .publication-item p {
-      margin: 0.5em 0 0;
-    }
-    
-    /* Footer Styling */
-    .footer {
-      background: #0a2342;
-      color: #aaa;
-      padding: 20px 0;
-      text-align: center;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .publication-item {
-        padding: 1em;
-      }
-      .wrapper {
-        padding: 2em 20px;
-      }
-    }
-  </style>
+
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div id="page-wrapper">
-    <!-- Header with Navigation -->
-    <header id="header">
-      <div class="menu-toggle" id="menu-toggle">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="menu-toggle" class="menu-toggle">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
       <nav class="top-nav" id="top-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="conferences.html">Conferences</a></li>
-          <li><a href="teaching.html">PMRF Teaching</a></li>
-          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <section class="wrapper">
+  <!-- Main Content -->
+  <div class="wrapper">
+    <section class="section">
       <div class="inner">
         <h2>Publications</h2>
+
         <div class="actions">
           <a href="https://scholar.google.com/citations?hl=en&user=ZZ92ylMAAAAJ" class="button" target="_blank">
-            <i class="fas fa-graduation-cap"></i> View All Publications on Google Scholar
+            <i class="fas fa-graduation-cap"></i>
+            View All on Google Scholar
           </a>
         </div>
 
         <!-- Filter Buttons -->
-        <div class="filter-buttons">
-          <button class="button small active" data-filter="all">All</button>
-          <button class="button small" data-filter="2025">2025</button>
-          <button class="button small" data-filter="2024">2024</button>
-          <button class="button small" data-filter="2023">2023</button>
-          <button class="button small" data-filter="2022">2022</button>
-          <button class="button small" data-filter="2020">2020</button>
+        <div class="filter-buttons spaced-filter-buttons">
+          <button class="button small paper link active" data-filter="all">All</button>
+          <button class="button small paper link" data-filter="2025">2025</button>
+          <button class="button small paper link" data-filter="2024">2024</button>
+          <button class="button small paper link" data-filter="2023">2023</button>
+          <button class="button small paper link" data-filter="2022">2022</button>
+          <button class="button small paper link" data-filter="2020">2020</button>
         </div>
 
         <!-- Publications List -->
@@ -253,14 +69,14 @@
             <div class="publication-item">
               <h4>Understanding the Mechanism of Nanocluster Formation from Machine-Learned Potential-based Simulations</h4>
               <p><strong>V Tiwari, T Karmakar*</strong><br>
-              <em>ChemRxiv</em></p>
-              <a href="https://chemrxiv.org/engage/chemrxiv/article-details/678b5287fa469535b97bb6bb" class="button small" target="_blank">Read Paper</a></p>
+              <em>Nano Letters,</em> <strong>2025,</strong> 25(14), 5940–5946</p>
+              <a href="https://chemrxiv.org/engage/chemrxiv/article-details/678b5287fa469535b97bb6bb" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
             <div class="publication-item">
               <h4>Ligand‐Mediated Highly Ordered Aggregation of 5‐Mercapto‐2‐Nitrobenzoic Acid Protected Atomically Precise Silver Nanocluster</h4>
               <p><strong>S Roy, V Tiwari, T Karmakar*, I Chakraborty*</strong><br>
-              <em>Small</em> 2412468</p>
-              <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202412468" class="button small" target="_blank">Read Paper</a></p>
+              <em>Small,</em> <strong>2025,</strong> 2412468</p>
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202412468" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
           </div>
 
@@ -270,29 +86,29 @@
             <div class="publication-item">
               <h4>Synthesis of Cyclic (Alkyl)(amino) carbene-Stabilized Copper–Iron Heterobimetallic Complexes</h4>
               <p><strong>A Sharma, V Tiwari, R Yadav, B Das, C Majumder, A Das, T Karmakar*, S Kundu*</strong><br>
-              <em>Organometallics</em> 43(23), 3054-3061<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.organomet.4c00413" class="button small" target="_blank">Read Paper</a></p>
+              <em>Organometallics,</em>  <strong>2024,</strong> 43(23), 3054-3061<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acs.organomet.4c00413" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
             <div class="publication-item">
               <h4>Stereoselective gem-Difunctionalization of Diazo Compounds with Vinyl Sulfoxonium Ylides and Thiols via Metalloradical Catalysis</h4>
               <p><strong>S Bhardwaj, DK Gopalakrishnan, S Deshwal, R Sen, V Tiwari, T Karmakar*, J Vaitla*</strong><br>
-              <em>ACS Catalysis</em> 14(4), 2805-2815<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098" class="button small" target="_blank">Read Paper</a></p>
+              <em>ACS Catalysis,</em> <strong>2024,</strong> 14(4), 2805-2815<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
             <div class="publication-item">
               <h4>Electrostatic-driven self-assembly of Janus-like monolayer-protected metal nanoclusters</h4>
               <p><strong>A Bhattacharyya, V Tiwari, T Karmakar*</strong><br>
-              <em>The Journal of Physical Chemistry Letters</em> 15(3), 687-692<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c03508" class="button small" target="_blank">Read Paper</a></p>
+              <em>The Journal of Physical Chemistry Letters,</em> <strong>2024,</strong> 15(3), 687-692<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c03508" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
             <div class="publication-item">
               <h4>A molecular dynamics study on the ion-mediated self-assembly of monolayer-protected nanoclusters</h4>
               <p><strong>V Tiwari, A Bhattacharyya, T Karmakar*</strong><br>
-              <em>Nanoscale</em> 16(32), 15141-15147<br>
-              <a href="https://pubs.rsc.org/en/content/articlehtml/2024/nr/d4nr02427c" class="button small" target="_blank">Read Paper</a></p>
+              <em>Nanoscale,</em> <strong>2024,</strong> 16(32), 15141-15147<br>
+              <a href="https://pubs.rsc.org/en/content/articlehtml/2024/nr/d4nr02427c" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
           </div>
 
@@ -302,53 +118,47 @@
             <div class="publication-item">
               <h4>Understanding Molecular Aggregation of Ligand-Protected Atomically-Precise Metal Nanoclusters</h4>
               <p><strong>V Tiwari, T Karmakar*</strong><br>
-              <em>The Journal of Physical Chemistry Letters</em> 14(29), 6686–6694<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c01770" class="button small" target="_blank">Read Paper</a></p>
+              <em>The Journal of Physical Chemistry Letters,</em> <strong>2023,</strong> 14(29), 6686–6694<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c01770" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
             <div class="publication-item">
               <h4>Cooperative Friedel–Crafts Alkylation of Electron-Deficient Arenes via Catalyst Activation with Hexafluoroisopropanol</h4>
               <p><strong>S Singh, S Mondal, V Tiwari, T Karmakar*, C K Hazra*</strong><br>
-              <em>Chemistry A European Journal</em> 29(18), e202300180<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098" class="button small" target="_blank">Read Paper</a></p>
+              <em>Chemistry A European Journal,</em> <strong>2023,</strong> 29(18), e202300180<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
-            <div class="publication-item">
-              <h4>Electrostatic-driven self-assembly of Janus-like monolayer-protected metal nanoclusters</h4>
-              <p><strong>A Bhattacharyya, V Tiwari, T Karmakar*</strong><br>
-              <em>The Journal of Physical Chemistry Letters</em> 15(3), 687-692<br>
-              <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/chem.202300180" class="button small" target="_blank">Read Paper</a></p>
-            </div>
               <div class="publication-item">
     <h4>Insights into the interactions of peptides with monolayer-protected metal nanoclusters</h4>
     <p>
       <strong>V Tiwari, S Garg, T Karmakar*</strong><br>
-      <em>ACS Applied Bio Materials</em> 7(2), 685-691<br>
-      <a href="https://pubs.acs.org/doi/full/10.1021/acsabm.2c00997" class="button small" target="_blank">Read Paper</a></p>
+      <em>ACS Applied Bio Materials,</em> <strong>2023,</strong> 7(2), 685-691<br>
+      <a href="https://pubs.acs.org/doi/full/10.1021/acsabm.2c00997" class="button small paper-link" target="_blank">Read Paper</a></p>
   </div>
   
   <div class="publication-item">
     <h4>Reduction of esters to alcohols and iodides using aminodiborane (μ-NH₂B₂H₅): scope and mechanistic investigations</h4>
     <p>
       <strong>A Nair, V Tiwari, S Rath, P Saini, A Verma, A J Elias*</strong><br>
-      <em>Chemical Communications</em> 59(74), 11117-11120<br>
-      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/cc/d3cc03100d" class="button small" target="_blank">Read Paper</a></p>
+      <em>Chemical Communications,</em> <strong>2023,</strong> 59(74), 11117-11120<br>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/cc/d3cc03100d" class="button small paper-link" target="_blank">Read Paper</a></p>
   </div>
   
   <div class="publication-item">
     <h4>In situ generated aminodiborane as a reagent for deoxygenative reduction of carboxamides to amines</h4>
     <p>
       <strong>A Nair, V Tiwari, A Verma, P Saini, A J Elias*</strong><br>
-      <em>Organic Chemistry Frontiers</em> 10(2), 327-334<br>
-      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/qo/d2qo01717b" class="button small" target="_blank">Read Paper</a></p>
+      <em>Organic Chemistry Frontiers,</em> <strong>2023,</strong> 10(2), 327-334<br>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2023/qo/d2qo01717b" class="button small paper-link" target="_blank">Read Paper</a></p>
  </div>
   
   <div class="publication-item">
     <h4>Understanding cyclic (alkyl)(amino) carbene–copper complex catalysed N–H and O–H bond addition to electron deficient olefins</h4>
     <p>
       <strong>A Tyagi, S Mondal, V Tiwari, T Karmakar*, S Kundu*</strong><br>
-      <em>Chemical Communications</em> 59(1), 110-113<br>
-      <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cc/d2cc05613e" class="button small" target="_blank">Read Paper</a></p>
+      <em>Chemical Communications,</em> <strong>2023,</strong> 59(1), 110-113<br>
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cc/d2cc05613e" class="button small paper-link" target="_blank">Read Paper</a></p>
  </div>
           </div>
 
@@ -359,16 +169,16 @@
     <h4>Collective Variables for Crystallization Simulations─ from Early Developments to Recent Advances</h4>
     <p>
       <strong>Neha, V Tiwari, S Mondal, N Kumari, T Karmakar*</strong><br>
-      <em>ACS omega</em> 8(1), 127-146<br>
-      <a href="https://pubs.acs.org/doi/full/10.1021/acsomega.2c06310" class="button small" target="_blank">Read Paper</a></p>
+      <em>ACS omega,</em> <strong>2022,</strong> 8(1), 127-146<br>
+      <a href="https://pubs.acs.org/doi/full/10.1021/acsomega.2c06310" class="button small paper-link" target="_blank">Read Paper</a></p>
  </div>
   
   <div class="publication-item">
     <h4>A Catalyst and Solvent Free Route for the Synthesis of N‐Substituted Pyrrolidones from Levulinic Acid</h4>
     <p>
       <strong>P Dolui, V Tiwari, P Saini, T Karmakar, K Makhal, H Goel, A J Elias*</strong><br>
-      <em>Chemistry–A European Journal</em> 28(43), e202200829<br>
-      <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/chem.202200829" class="button small" target="_blank">Read Paper</a></p>
+      <em>Chemistry–A European Journal,</em> <strong>2022,</strong> 28(43), e202200829<br>
+      <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/full/10.1002/chem.202200829" class="button small paper-link" target="_blank">Read Paper</a></p>
  </div>
           </div>
 
@@ -378,70 +188,31 @@
             <div class="publication-item">
               <h4>Catalytic Oxidation of Alcohols and Amines to Value‐Added Chemicals using Water as the Solvent</h4>
               <p><strong>S Hazra, E Malik, A Nair, V Tiwari, P Dolui, A J Elias*</strong><br>
-              <em>Chemistry–An Asian Journal</em> 15(13), 1916-1936<br>
-              <a href="https://aces.onlinelibrary.wiley.com/doi/full/10.1002/asia.202000299" class="button small" target="_blank">Read Paper</a></p>
+              <em>Chemistry–An Asian Journal,</em> <strong>2020,</strong> 15(13), 1916-1936<br>
+              <a href="https://aces.onlinelibrary.wiley.com/doi/full/10.1002/asia.202000299" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
 
             <div class="publication-item">
               <h4>NaCl as Catalyst and Water as Solvent: Highly E-Selective Olefination</h4>
               <p><strong>S Hazra, V Tiwari, A Verma, P Dolui, A J Elias*</strong><br>
-              <em>Organic Letters</em> 22(14), 5496-5501<br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.orglett.0c01851" class="button small" target="_blank">Read Paper</a></p>
+              <em>Organic Letters,</em> <strong>2020,</strong> 22(14), 5496-5501<br>
+              <a href="https://pubs.acs.org/doi/full/10.1021/acs.orglett.0c01851" class="button small paper-link" target="_blank">Read Paper</a></p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <section class="footer">
-      <div class="inner">
-        © Vikas Tiwari 2025-Now
-      </div>
-    </section>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      © Vikas Tiwari 2025–Now | Department of Chemistry, IIT Delhi
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      // Mobile menu toggle
-      $('#menu-toggle').click(function(e){
-        e.stopPropagation();
-        $('#top-nav').toggleClass('active');
-      });
-      $(document).on('click', function(e){
-        if(!$(e.target).closest('#header').length){
-          $('#top-nav').removeClass('active');
-        }
-      });
-      
-      // Smooth scrolling for internal links
-      var headerHeight = $('#header').outerHeight();
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if(target.length) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top - headerHeight
-          }, 1000);
-        }
-      });
-      
-      // Filter functionality
-      $('.filter-buttons button').click(function(){
-        const year = $(this).data('filter');
-        $('.filter-buttons button').removeClass('active');
-        $(this).addClass('active');
-        
-        if(year === 'all') {
-          $('.publication-year').show();
-        } else {
-          $('.publication-year').hide();
-          $(`.publication-year[data-year="${year}"]`).show();
-        }
-      });
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
