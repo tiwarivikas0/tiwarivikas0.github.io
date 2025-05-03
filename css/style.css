@@ -574,3 +574,11 @@ body.dark-mode .cv-date {
   .research-item { padding: 1.5rem; }
   .research-item h3 { font-size: 1.2rem; }
 }
+
+.form-status {
+  margin-top: 1rem;
+  font-weight: 500;
+  min-height: 1.2em;
+}
+.form-status.success { color: #28a745; }   /* green */
+.form-status.error   { color: #dc3545; }   /* red */
