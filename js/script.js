@@ -60,3 +60,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form   = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    // tell Formspree we want JSON back
+    const opts = {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' },
+    };
+
+    try {
+      const res = await fetch(form.action, opts);
+      if (res.ok) {
+        status.textContent = '🎉 Message sent successfully!';
+        status.className = 'form-status success';
+        form.reset();
+      } else {
+        const err = await res.json();
+        status.textContent = err.error || '⚠️ Something went wrong.';
+        status.className = 'form-status error';
+      }
+    } catch (err) {
+      status.textContent = '⚠️ Network error. Please try again.';
+      status.className = 'form-status error';
+    }
+  });
+});
