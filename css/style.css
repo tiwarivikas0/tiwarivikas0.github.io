@@ -1,5 +1,5 @@
 /* === TYPOGRAPHY SETUP === */
-h1, h2 { font-family: 'Playfair Display', serif; }
+h1, h2 { font-family: 'Playfair Display', sans-serif; }
 body, nav a, .button { font-family: 'Montserrat', sans-serif; }
 
 /* Font sizes */
