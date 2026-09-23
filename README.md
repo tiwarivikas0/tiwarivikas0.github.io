@@ -63,6 +63,20 @@ python -m playwright install chromium
 python scripts/generate_cv.py
 ```
 
+## Publishing CSS and JavaScript changes
+
+After formatting changes to `css/style.css` or `js/script.js`, run:
+
+```sh
+python scripts/update_asset_versions.py
+```
+
+Commit and push the updated HTML pages along with the assets. This adds a version
+derived from each asset's contents to its URL on every page, preventing browsers
+from mixing a new page with a cached stylesheet or script from an older deployment.
+No build step or extra Python packages are required. If a browser already has an
+older page open, reload it after the GitHub Pages deployment finishes.
+
 ## Repository listings
 
 The Software page contains a static snapshot of public GitHub repositories checked
