@@ -1,0 +1,158 @@
+{
+  "source": "https://github.com/tiwarivikas0?tab=repositories",
+  "checked": "2026-09-22",
+  "repositories": [
+    {
+      "name": "comet",
+      "url": "https://github.com/tiwarivikas0/comet",
+      "description": "Pressure COntroller using METropolis algorithm (COMET)",
+      "language": "Python",
+      "upstream": "https://github.com/gbovolenta/comet",
+      "fork": true
+    },
+    {
+      "name": "Gen-COMPAS",
+      "url": "https://github.com/tiwarivikas0/Gen-COMPAS",
+      "description": "The scripts for Gen-COMPAS framework",
+      "language": "Python",
+      "upstream": "https://github.com/Tangcyu/Gen-COMPAS",
+      "fork": true
+    },
+    {
+      "name": "franken",
+      "url": "https://github.com/tiwarivikas0/franken",
+      "description": "ML potentials via transfer learning",
+      "language": "Python",
+      "upstream": "https://github.com/CSML-IIT-UCL/franken",
+      "fork": true
+    },
+    {
+      "name": "periodic-table",
+      "url": "https://github.com/tiwarivikas0/periodic-table",
+      "description": "",
+      "language": "JavaScript",
+      "upstream": "https://github.com/MolSSI-Education/periodic-table",
+      "fork": true
+    },
+    {
+      "name": "molecool",
+      "url": "https://github.com/tiwarivikas0/molecool",
+      "description": "",
+      "language": "Python",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "bader2ml",
+      "url": "https://github.com/tiwarivikas0/bader2ml",
+      "description": "",
+      "language": "Python",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "qmmm_workshop",
+      "url": "https://github.com/tiwarivikas0/qmmm_workshop",
+      "description": "",
+      "language": "Python",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "Ag_chiral_SA",
+      "url": "https://github.com/tiwarivikas0/Ag_chiral_SA",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "Au8_MgO",
+      "url": "https://github.com/tiwarivikas0/Au8_MgO",
+      "description": "",
+      "language": "C++",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "mpc_QMMM",
+      "url": "https://github.com/tiwarivikas0/mpc_QMMM",
+      "description": "",
+      "language": "C++",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "ANDC_workshop_g2",
+      "url": "https://github.com/tiwarivikas0/ANDC_workshop_g2",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "ANDC_workshop",
+      "url": "https://github.com/tiwarivikas0/ANDC_workshop",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "Ag6L6_nucleation",
+      "url": "https://github.com/tiwarivikas0/Ag6L6_nucleation",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "Ion_med_self_assembly",
+      "url": "https://github.com/tiwarivikas0/Ion_med_self_assembly",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "J-MPC_self-assembly",
+      "url": "https://github.com/tiwarivikas0/J-MPC_self-assembly",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "molinfo",
+      "url": "https://github.com/tiwarivikas0/molinfo",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "MPCs_aggregation",
+      "url": "https://github.com/tiwarivikas0/MPCs_aggregation",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    },
+    {
+      "name": "NanoModeler",
+      "url": "https://github.com/tiwarivikas0/NanoModeler",
+      "description": "",
+      "language": "Python",
+      "upstream": "https://github.com/cebasfu93/NanoModeler",
+      "fork": true
+    },
+    {
+      "name": "MEL-MPC-simulation-files",
+      "url": "https://github.com/tiwarivikas0/MEL-MPC-simulation-files",
+      "description": "",
+      "language": "",
+      "upstream": null,
+      "fork": false
+    }
+  ]
+}

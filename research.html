@@ -1,204 +1,392 @@
-<!DOCTYPE HTML>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Research – Vikas Tiwari</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="header-inner">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-        <i class="fas fa-moon"></i>
-      </button>
-      <button id="menu-toggle" class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="top-nav" id="top-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html" class="active">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="wrapper">
-    <section class="section">
-      <div class="inner">
-        <h2 class="section-title">Research Overview</h2>
-        <p class="research-overview">
-          My research focuses on computational chemistry approaches to understand nanoscale phenomena. 
-          Combining molecular dynamics simulations with machine learning techniques, I investigate 
-          self-assembly processes, biomolecular interactions, and catalytic mechanisms at atomic resolution.
-        </p>
-
-        <!-- Research Interests -->
-        <div class="research-interests">
-          
-          <div class="research-item">
-            <h3>Nanocluster Self-Assembly</h3>
-            <p>
-              Investigating the thermodynamic drivers of metal nanocluster assembly using enhanced 
-              sampling techniques. Developing machine-learned potentials to simulate assembly pathways 
-              over extended timescales. Current work focuses on ligand-mediated assembly mechanisms 
-              and their response to environmental stimuli.
-            </p>
-            <a href="publications.html#nanocluster" class="button small">Related Publication</a>
-          </div>
-
-          <div class="research-item">
-            <h3>Biomolecule-Nanocluster Interactions</h3>
-            <p>
-              Characterizing interaction dynamics between proteins and monolayer-protected clusters 
-              through all-atom MD simulations. Developing collective variables to study binding 
-              thermodynamics and kinetics. Recent findings reveal sequence-dependent binding 
-              affinities with implications for biosensing applications.
-            </p>
-            <a href="publications.html#biomolecule" class="button small">Related Publication</a>
-          </div>
-
-          <div class="research-item">
-            <h3>Catalytic Reaction Mechanisms</h3>
-            <p>
-              Elucidating reaction pathways in heterogeneous catalysis using metadynamics. 
-              Current focus on copper-iron bimetallic systems for C-H activation. Developing 
-              hybrid QM/ML approaches to achieve DFT-level accuracy in large-scale simulations 
-              of catalytic cycles.
-            </p>
-            <a href="publications.html#catalysis" class="button small">Related Publication</a>
-          </div>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Research – Vikas Tiwari</title>
+    <meta
+      content="Vikas Tiwari — computational chemistry, molecular simulations, enhanced sampling, and machine learning. Research."
+      name="description"
+    />
+    <link href="images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="images/favicon.png" rel="icon" sizes="32x32" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav aria-label="Primary navigation" class="sidenav">
+      <div aria-label="Social profiles" class="nav-socials">
+        <a
+          aria-label="LinkedIn"
+          href="https://www.linkedin.com/in/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 20.447 20.452 h -3.554 v -5.569 c 0 -1.328 -.027 -3.037 -1.852 -3.037 -1.853 0
+                -2.136 1.445 -2.136 2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h .046 c .477 -.9
+                1.637 -1.85 3.37 -1.85 3.601 0 4.267 2.37 4.267 5.455 v 6.286 z M 5.337 7.433 c
+                -1.144 0 -2.063 -.926 -2.063 -2.065 0 -1.138 .92 -2.063 2.063 -2.063 1.14 0 2.064
+                .925 2.064 2.063 0 1.139 -.925 2.065 -2.064 2.065 z m 1.782 13.019 H 3.555 V 9 h
+                3.564 v 11.452 z M 22.225 0 H 1.771 C .792 0 0 .774 0 1.729 v 20.542 C 0 23.227 .792
+                24 1.771 24 h 20.451 C 23.2 24 24 23.227 24 22.271 V 1.729 C 24 .774 23.2 0 22.225 0
+                z
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="GitHub"
+          href="https://github.com/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 12 .297 c -6.63 0 -12 5.373 -12 12 0 5.303 3.438 9.8 8.205 11.385 .6 .113 .82
+                -.258 .82 -.577 0 -.285 -.01 -1.04 -.015 -2.04 -3.338 .724 -4.042 -1.61 -4.042 -1.61
+                C 4.422 18.07 3.633 17.7 3.633 17.7 c -1.087 -.744 .084 -.729 .084 -.729 1.205 .084
+                1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495 .998 .108 -.776 .417 -1.305 .76
+                -1.605 -2.665 -.3 -5.466 -1.332 -5.466 -5.93 0 -1.31 .465 -2.38 1.235 -3.22 -.135
+                -.303 -.54 -1.523 .105 -3.176 0 0 1.005 -.322 3.3 1.23 .96 -.267 1.98 -.399 3 -.405
+                1.02 .006 2.04 .138 3 .405 2.28 -1.552 3.285 -1.23 3.285 -1.23 .645 1.653 .24 2.873
+                .12 3.176 .765 .84 1.23 1.91 1.23 3.22 0 4.61 -2.805 5.625 -5.475 5.92 .42 .36 .81
+                1.096 .81 2.22 0 1.606 -.015 2.896 -.015 3.286 0 .315 .21 .69 .825 .57 C 20.565
+                22.092 24 17.592 24 12.297 c 0 -6.627 -5.373 -12 -12 -12
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="Google Scholar"
+          href="https://scholar.google.com/citations?user=ZZ92ylMAAAAJ&amp;hl=en"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Google Scholar"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 12 24 a 7 7 0 1 1 0 -14 7 7 0 0 1 0 14 z m 0 -24 L 0 9.5 l 4.838 3.35 L 12 18 l
+                7.162 -5.15 L 24 9.5 z
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="Twitter / X"
+          href="https://X.com/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Twitter / X"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 18.901 1.153 h 3.68 l -8.04 9.19 L 24 22.846 h -7.406 l -5.8 -7.584 -6.638 7.584 H
+                .474 l 8.6 -9.83 L 0 1.154 h 7.594 l 5.243 6.931 Z M 17.61 20.644 h 2.039 L 6.486
+                3.24 H 4.298 Z
+              "
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <div class="navblock">
+        <div class="navblock_text">
+          <a href="index.html">About</a
+          ><a aria-current="page" class="active" href="research.html">Research</a
+          ><a href="publications.html">Publications</a><a href="presentations.html">Presentations</a
+          ><a href="cv.html">CV</a><a href="news.html">News</a
+          ><a href="software.html">Software/Packages</a>
         </div>
       </div>
-    </section>
-  </div>
-
-  <!-- Conferences Section -->
-  <div class="wrapper">
-<section class="section">
-  <div class="inner">
-    <h2 class="section-title">Conferences & Presentations</h2>
-    
-    <div class="conference-list">
-      <!-- 2025 -->
-      <div class="conference-item">
-        <div class="conference-date">Feb 2025</div>
-        <div class="conference-details">
-          <h3>PMRF Symposium 2025</h3>
-          <p class="conference-location">IIT Hyderabad, India</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"Atomistic Details of Nanocluster Formation from Machine-Learned Potential-based Simulations"</p>
+      <button aria-label="Toggle dark mode" class="theme-toggle-btn" id="theme-toggle"></button>
+    </nav>
+    <main class="main-content" id="main">
+      <div class="home-shell">
+        <div class="wrapper">
+          <section class="section">
+            <div class="inner">
+              <h1 class="section-title">Research Overview</h1>
+              <p class="research-overview">
+                My research focuses on computational chemistry approaches to understand nanoscale
+                phenomena. Combining molecular dynamics simulations with machine learning
+                techniques, I investigate self-assembly processes, biomolecular interactions, and
+                catalytic mechanisms at atomic resolution.
+              </p>
+              <div class="research-interests">
+                <div class="research-item">
+                  <h3>Machine Learning for Molecular Systems</h3>
+                  <p>
+                    I am interested in developing and applying machine learning methods to model 
+                    complex molecular systems with greater accuracy and efficiency. My work focuses
+                     on machine-learned interatomic potentials, data-driven molecular representations, 
+                     and AI-assisted simulation strategies to bridge the gap between quantum-mechanical 
+                     accuracy and large-scale molecular simulations.
+                  </p>
+                  <details class="related-publications">
+                    <summary class="button small">Related publications (2)</summary>
+                    <ul class="related-publication-list">
+                     <li>
+                        <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.5c01340"
+                          >Understanding the Mechanism of Nanocluster Formation from Machine-Learned
+                          Potential-based Simulations</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, T Karmakar*</strong><br />
+                          <em>Nano Letters,</em> <strong>2025,</strong> 25(14), 5940–5946
+                        </p>
+                      </li>
+                       <li>
+                        <a href="https://doi.org/10.1063/5.0287822"
+                          >Dynamics of gold nanocluster on MgO surface with F-center defect and its
+                          implication for CO oxidation</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, Dhananjay, T Karmakar*</strong><br />
+                          <em>The Journal of Chemical Physics,</em> <strong>2025,</strong> 163,
+                          214715
+                        </p>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+                <div class="research-item">
+                  <h3>Nanocluster Self-Assembly</h3>
+                  <p>
+                    Investigating the thermodynamic drivers of metal nanocluster assembly using
+                    enhanced sampling techniques. Developing machine-learned potentials to simulate
+                    assembly pathways over extended timescales. Current work focuses on
+                    ligand-mediated assembly mechanisms and their response to environmental stimuli.
+                  </p>
+                  <details class="related-publications">
+                    <summary class="button small">Related publications (7)</summary>
+                    <ul class="related-publication-list">
+                      <li>
+                        <a href="https://doi.org/10.1021/acs.chemmater.5c02698"
+                          >Aggregation-Mediated Cuprophilic Interactions Governing the Luminescence
+                          of a Cu6 Nanocluster</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong
+                            >B-L Han, P-P Sun, Z-N Wu, R Narwal, V Tiwari, R K Gupta, T Karmakar, Z
+                            Wang*, C-H Tung, D Sun*</strong
+                          ><br />
+                          <em>Chemistry of Materials,</em> <strong>2026,</strong> 38(7), 3202–3210
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://doi.org/10.1021/acs.jpclett.5c01929"
+                          >Multiscale Modeling Approach to Chiral Nanocluster Self-Assembly</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>Neha, V Tiwari, S Mondal, T Karmakar*</strong><br />
+                          <em>The Journal of Physical Chemistry Letters,</em>
+                          <strong>2025,</strong> 16(39), 10187–10194
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.5c01340"
+                          >Understanding the Mechanism of Nanocluster Formation from Machine-Learned
+                          Potential-based Simulations</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, T Karmakar*</strong><br />
+                          <em>Nano Letters,</em> <strong>2025,</strong> 25(14), 5940–5946
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202412468"
+                          >Ligand‐Mediated Highly Ordered Aggregation of 5‐Mercapto‐2‐Nitrobenzoic
+                          Acid Protected Atomically Precise Silver Nanocluster</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>S Roy, V Tiwari, T Karmakar*, I Chakraborty*</strong><br />
+                          <em>Small,</em> <strong>2025,</strong> 2412468
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c03508"
+                          >Electrostatic-driven self-assembly of Janus-like monolayer-protected
+                          metal nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>A Bhattacharyya, V Tiwari, T Karmakar*</strong><br />
+                          <em>The Journal of Physical Chemistry Letters,</em>
+                          <strong>2024,</strong> 15(3), 687-692<br />
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2024/nr/d4nr02427c"
+                          >A molecular dynamics study on the ion-mediated self-assembly of
+                          monolayer-protected nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, A Bhattacharyya, T Karmakar*</strong><br />
+                          <em>Nanoscale,</em> <strong>2024,</strong> 16(32), 15141-15147<br />
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpclett.3c01770"
+                          >Understanding Molecular Aggregation of Ligand-Protected
+                          Atomically-Precise Metal Nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, T Karmakar*</strong><br />
+                          <em>The Journal of Physical Chemistry Letters,</em>
+                          <strong>2023,</strong> 14(29), 6686–6694<br />
+                        </p>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+                <div class="research-item">
+                  <h3>Biomolecule-Nanocluster Interactions</h3>
+                  <p>
+                    Characterizing interaction dynamics between proteins and monolayer-protected
+                    clusters through all-atom MD simulations. Developing collective variables to
+                    study binding thermodynamics and kinetics. Recent findings reveal
+                    sequence-dependent binding affinities with implications for biosensing
+                    applications.
+                  </p>
+                  <details class="related-publications">
+                    <summary class="button small">Related publications (2)</summary>
+                    <ul class="related-publication-list">
+                      <li>
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2025/sc/d5sc00421g"
+                          >Modeling catalytic reaction on ligand-protected metal nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, T Karmakar*</strong><br />
+                          <em>Chemical Science,</em> <strong>2025,</strong> 16, 12080-12086
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acsabm.2c00997"
+                          >Insights into the interactions of peptides with monolayer-protected metal
+                          nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, S Garg, T Karmakar*</strong><br />
+                          <em>ACS Applied Bio Materials,</em> <strong>2023,</strong> 7(2),
+                          685-691<br />
+                        </p>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+                <div class="research-item">
+                  <h3>Catalytic Reaction Mechanisms</h3>
+                  <p>
+                    Elucidating reaction pathways in heterogeneous catalysis using metadynamics.
+                    Current focus on copper-iron bimetallic systems for C-H activation. Developing
+                    hybrid QM/ML approaches to achieve DFT-level accuracy in large-scale simulations
+                    of catalytic cycles.
+                  </p>
+                  <details class="related-publications">
+                    <summary class="button small">Related publications (7)</summary>
+                    <ul class="related-publication-list">
+                      <li>
+                        <a href="https://doi.org/10.1002/smll.74276"
+                          >Stabilization of Ligand‐Free Small Gold Nanocluster Within a
+                          Metal–Organic Framework for Enhanced Hydrogen Evolution and Horseradish
+                          Peroxidase‐Mimicking Catalysis in Aqueous Media</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong
+                            >G James, R K Aparna, Dhananjay, A Karmakar, V Tiwari, U S Manjunatha, S
+                            S Rose, A Kumar, Nonappa, S Yamazoe, S Kikkawa, V C Prabhakaran, R
+                            Narayanan, S Kundu*, T Karmakar*, S Mandal*</strong
+                          ><br />
+                          <em>Small,</em> <strong>2026,</strong> 22, e74276
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://doi.org/10.1063/5.0287822"
+                          >Dynamics of gold nanocluster on MgO surface with F-center defect and its
+                          implication for CO oxidation</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, Dhananjay, T Karmakar*</strong><br />
+                          <em>The Journal of Chemical Physics,</em> <strong>2025,</strong> 163,
+                          214715
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2025/sc/d5sc00421g"
+                          >Modeling catalytic reaction on ligand-protected metal nanoclusters</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>V Tiwari, T Karmakar*</strong><br />
+                          <em>Chemical Science,</em> <strong>2025,</strong> 16, 12080-12086
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acs.organomet.4c00413"
+                          >Synthesis of Cyclic (Alkyl)(amino) carbene-Stabilized Copper–Iron
+                          Heterobimetallic Complexes</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong
+                            >A Sharma, V Tiwari, R Yadav, B Das, C Majumder, A Das, T Karmakar*, S
+                            Kundu*</strong
+                          ><br />
+                          <em>Organometallics,</em> <strong>2024,</strong> 43(23), 3054-3061<br />
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098"
+                          >Stereoselective gem-Difunctionalization of Diazo Compounds with Vinyl
+                          Sulfoxonium Ylides and Thiols via Metalloradical Catalysis</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong
+                            >S Bhardwaj, DK Gopalakrishnan, S Deshwal, R Sen, V Tiwari, T Karmakar*,
+                            J Vaitla*</strong
+                          ><br />
+                          <em>ACS Catalysis,</em> <strong>2024,</strong> 14(4), 2805-2815<br />
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.acs.org/doi/full/10.1021/acscatal.3c06098"
+                          >Cooperative Friedel–Crafts Alkylation of Electron-Deficient Arenes via
+                          Catalyst Activation with Hexafluoroisopropanol</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>S Singh, S Mondal, V Tiwari, T Karmakar*, C K Hazra*</strong
+                          ><br />
+                          <em>Chemistry A European Journal,</em> <strong>2023,</strong> 29(18),
+                          e202300180<br />
+                        </p>
+                      </li>
+                      <li>
+                        <a href="https://pubs.rsc.org/en/content/articlehtml/2022/cc/d2cc05613e"
+                          >Understanding cyclic (alkyl)(amino) carbene–copper complex catalysed N–H
+                          and O–H bond addition to electron deficient olefins</a
+                        >
+                        <p class="related-publication-meta">
+                          <strong>A Tyagi, S Mondal, Anmol, V Tiwari, T Karmakar*, S Kundu*</strong
+                          ><br />
+                          <em>Chemical Communications,</em> <strong>2023,</strong> 59(1), 110-113<br />
+                        </p>
+                      </li>
+                      
+                    </ul>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+        <footer class="site-footer">© Vikas Tiwari 2026 All rights reserved.</footer>
       </div>
-
-      <!-- 2024 -->
-      <div class="conference-item">
-        <div class="conference-date">Oct 2024</div>
-        <div class="conference-details">
-          <h3>Physical Chemistry Symposium 2024</h3>
-          <p class="conference-location">IIT Bombay, India</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"Modeling Enzyme-like Catalytic Reaction on Ligand-protected Metal Nanoclusters"</p>
-        </div>
-      </div>
-
-      <div class="conference-item">
-        <div class="conference-date">Sept 2024</div>
-        <div class="conference-details">
-          <h3>AsiaNANO Conference</h3>
-          <p class="conference-location">IIT Madras, Chennai, India</p>
-          <p class="presentation-type">Oral presentation</p>
-          <p class="presentation-title">"Dynamics and Self-Assembly of Atomically Precise Nanoclusters"</p>
-        </div>
-      </div>
-
-      <div class="conference-item">
-        <div class="conference-date">Aug 2024</div>
-        <div class="conference-details">
-          <h3>ACS Fall Meeting 2024</h3>
-          <p class="conference-location">Global Virtual Symposia (Online)</p>
-          <p class="presentation-type">Oral presentation</p>
-          <p class="presentation-title">"Modeling Enzyme-like Catalytic Reaction on Ligand-protected Metal Nanoclusters"</p>
-        </div>
-      </div>
-
-      <div class="conference-item">
-        <div class="conference-date">Feb 2024</div>
-        <div class="conference-details">
-          <h3>MD@60 JNCASR-CECAM International Conference</h3>
-          <p class="conference-location">JNCASR, Bengaluru, India</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"Investigating Enzyme-like Photocatalytic Oxidation on Ligand-protected Metal Nanoclusters"</p>
-        </div>
-      </div>
-
-      <!-- 2023 -->
-      <div class="conference-item">
-        <div class="conference-date">July 2023</div>
-        <div class="conference-details">
-          <h3>Enhanced Sampling Workshop</h3>
-          <p class="conference-location">CECAM-HQ-EPFL, Lausanne, Switzerland</p>
-          <p class="presentation-type">Workshop Attendee</p>
-          <p class="presentation-title">"Hands-on training in PLUMED enhanced sampling techniques"</p>
-        </div>
-      </div>
-
-      <!-- 2022 -->
-      <div class="conference-item">
-        <div class="conference-date">Dec 2022</div>
-        <div class="conference-details">
-          <h3>CFOS-2022</h3>
-          <p class="conference-location">IIT Roorkee, India</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"DFT study of pTSA catalyzed Friedel Craft's reaction revealing concerted mechanism along with cooperative effect of HFIP"</p>
-        </div>
-      </div>
-
-      <div class="conference-item">
-        <div class="conference-date">Nov 2022</div>
-        <div class="conference-details">
-          <h3>IGWYR-2022</h3>
-          <p class="conference-location">IIT Delhi, India</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"DFT study of pTSA catalyzed Friedel Craft's reaction revealing concerted mechanism along with cooperative effect of HFIP"</p>
-        </div>
-      </div>
-
-      <!-- 2021 -->
-      <div class="conference-item">
-        <div class="conference-date">Dec 2021</div>
-        <div class="conference-details">
-          <h3>MMM-II Conference</h3>
-          <p class="conference-location">NISER Bhubaneswar (Online)</p>
-          <p class="presentation-type">Poster presentation</p>
-          <p class="presentation-title">"NaCl as catalyst and water as solvent: Highly E-selective olefination of methyl-substituted N-heteroarenes with benzyl amines and alcohols"</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-</div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      © Vikas Tiwari 2025–Now | Department of Chemistry, IIT Delhi
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    </main>
+  </body>
 </html>

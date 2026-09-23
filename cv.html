@@ -1,169 +1,241 @@
-<!DOCTYPE HTML>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Curriculum Vitae – Vikas Tiwari</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="header-inner">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-        <i class="fas fa-moon"></i>
-      </button>
-      <button id="menu-toggle" class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="top-nav" id="top-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="cv.html" class="active">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="wrapper">
-    <section class="section">
-      <div class="inner">
-        <h2 class="section-title">Curriculum Vitae</h2>
-        <p class="research-overview">
-          Doctoral candidate in Computational Chemistry at IIT Delhi with expertise in molecular dynamics simulations,
-          enhanced sampling techniques, and machine learning applications. PMRF scholar with 9.5/10 CGPA and
-          10+ publications in high-impact journals.
-        </p>
-
-        <!-- Education Section -->
-        <div class="cv-section">
-          <h3 class="cv-section-title">Education</h3>
-          
-          <div class="cv-item">
-            <div class="cv-date">Feb 2021 – Present</div>
-            <div class="cv-details">
-              <h4>Ph.D. Computational Chemistry</h4>
-              <p class="institution">Indian Institute of Technology Delhi</p>
-              <p class="advisor">Thesis Advisor: Dr. Tarak Karmakar</p>
-              <p class="gpa">CGPA: 9.50/10.0</p>
-              <p class="thesis-title">"Computational Modelling of Monolayer-Protected Metal Nanoclusters: Formation, Self-Assembly, and Catalytic Mechanisms"</p>
-              <p class="thesis-desc">
-                Monolayer-protected metal nanoclusters (MPCs) are a new class of materials with atomically precise structures, 
-                enabling tuneable physicochemical properties and a broad range of applications in catalysis, biomedicine, and 
-                materials science. This thesis employs a multiscale computational approach to understand key aspects of MPC 
-                behaviour, including their formation, self-assembly, interactions with biomolecules, and catalytic mechanisms.
-              </p>
-            </div>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-date">2018 – 2020</div>
-            <div class="cv-details">
-              <h4>M.Sc. Chemistry</h4>
-              <p class="institution">Indian Institute of Technology Delhi</p>
-              <p class="advisor">Thesis Advisor: Prof. Anil J. Elias</p>
-              <p class="gpa">CGPA: 9.33/10.0</p>
-              <p class="thesis-title">"Highly E-Selective Olefination of Methyl Substituted N-Heteroarenes with Benzyl Amines using NaCl as Catalyst and Water as Solvent"</p>
-              <p class="thesis-desc">
-                Developed a sustainable, metal-free method for highly E-selective olefination using NaCl catalyst in aqueous 
-                medium. Demonstrated broad substrate scope and green synthesis potential through in-situ aldehyde formation.
-              </p>
-            </div>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-date">2015 – 2018</div>
-            <div class="cv-details">
-              <h4>B.Sc. Chemistry</h4>
-              <p class="institution">B. K. Birla College of Commerce, Science and Arts, Kalyan, Mumbai</p>
-              <p class="gpa">CGPA: 6.87/7.00</p>
-            </div>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-date">2013 – 2015</div>
-            <div class="cv-details">
-              <h4>Higher Secondary Education</h4>
-              <p class="institution">Tarapur Vidya Mandir, Boisar</p>
-              <p class="gpa">Subjects: Physics, Chemistry, Maths, Biology</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scholarships & Awards -->
-        <div class="cv-section">
-          <h3 class="cv-section-title">Scholarships and Awards</h3>
-          <div class="awards-grid">
-            <div class="award-item">
-              <span class="award-year">2024</span>
-              <span class="award-name">Asian Young NanoScientist Presentation Award</span>
-            </div>
-            <div class="award-item">
-              <span class="award-year">2021</span>
-              <span class="award-name">Prime Minister Research Fellowship</span>
-            </div>
-            <div class="award-item">
-              <span class="award-year">2020</span>
-              <span class="award-name">CSIR-NET Junior Research Fellowship Award</span>
-            </div>
-            <div class="award-item">
-              <span class="award-year">2020</span>
-              <span class="award-name">Graduate Aptitude Test in Engineering (GATE)</span>
-            </div>
-            <div class="award-item">
-              <span class="award-year">2018</span>
-              <span class="award-name">Joint Admission Test for Masters (JAM)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="skills-section">
-          <div class="skills-column">
-            <h3 class="cv-section-title">Research Skills</h3>
-            <ul class="skills-list">
-              <li>Classical molecular dynamics simulations (Atomistic and coarse grained)</li>
-              <li>Ab initio molecular dynamics simulations</li>
-              <li>Enhanced sampling methods (Metadynamics, OPES, Umbrella sampling)</li>
-              <li>Machine-learning potential-based simulations</li>
-              <li>QM/MM molecular dynamics simulations</li>
-              <li>Mechanistic investigation using static DFT calculations</li>
-            </ul>
-          </div>
-          
-          <div class="skills-column">
-            <h3 class="cv-section-title">Technical Skills</h3>
-            <ul class="skills-list">
-              <li><strong>OS:</strong> Linux, Windows, macOS</li>
-              <li><strong>Software:</strong> GROMACS, Gaussian, VMD, OVITO, PLUMED, CP2K, DeepMD-kit, LAMMPS</li>
-              <li><strong>Programming:</strong> Python (NumPy, Pandas, Matplotlib, ASE)</li>
-              <li><strong>ML Frameworks:</strong> PyTorch, LibTorch</li>
-              <li><strong>Visualization:</strong> Matplotlib, VMD, OVITO</li>
-              <li><strong>Tools:</strong> GitHub, LaTeX, Jupyter Notebooks</li>
-            </ul>
-          </div>
-        </div>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Curriculum Vitae – Vikas Tiwari</title>
+    <meta
+      content="Vikas Tiwari — computational chemistry, molecular simulations, enhanced sampling, and machine learning. Curriculum Vitae."
+      name="description"
+    />
+    <link href="images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="images/favicon.png" rel="icon" sizes="32x32" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav aria-label="Primary navigation" class="sidenav">
+      <div aria-label="Social profiles" class="nav-socials">
+        <a
+          aria-label="LinkedIn"
+          href="https://www.linkedin.com/in/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 20.447 20.452 h -3.554 v -5.569 c 0 -1.328 -.027 -3.037 -1.852 -3.037 -1.853 0
+                -2.136 1.445 -2.136 2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h .046 c .477 -.9
+                1.637 -1.85 3.37 -1.85 3.601 0 4.267 2.37 4.267 5.455 v 6.286 z M 5.337 7.433 c
+                -1.144 0 -2.063 -.926 -2.063 -2.065 0 -1.138 .92 -2.063 2.063 -2.063 1.14 0 2.064
+                .925 2.064 2.063 0 1.139 -.925 2.065 -2.064 2.065 z m 1.782 13.019 H 3.555 V 9 h
+                3.564 v 11.452 z M 22.225 0 H 1.771 C .792 0 0 .774 0 1.729 v 20.542 C 0 23.227 .792
+                24 1.771 24 h 20.451 C 23.2 24 24 23.227 24 22.271 V 1.729 C 24 .774 23.2 0 22.225 0
+                z
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="GitHub"
+          href="https://github.com/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 12 .297 c -6.63 0 -12 5.373 -12 12 0 5.303 3.438 9.8 8.205 11.385 .6 .113 .82
+                -.258 .82 -.577 0 -.285 -.01 -1.04 -.015 -2.04 -3.338 .724 -4.042 -1.61 -4.042 -1.61
+                C 4.422 18.07 3.633 17.7 3.633 17.7 c -1.087 -.744 .084 -.729 .084 -.729 1.205 .084
+                1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495 .998 .108 -.776 .417 -1.305 .76
+                -1.605 -2.665 -.3 -5.466 -1.332 -5.466 -5.93 0 -1.31 .465 -2.38 1.235 -3.22 -.135
+                -.303 -.54 -1.523 .105 -3.176 0 0 1.005 -.322 3.3 1.23 .96 -.267 1.98 -.399 3 -.405
+                1.02 .006 2.04 .138 3 .405 2.28 -1.552 3.285 -1.23 3.285 -1.23 .645 1.653 .24 2.873
+                .12 3.176 .765 .84 1.23 1.91 1.23 3.22 0 4.61 -2.805 5.625 -5.475 5.92 .42 .36 .81
+                1.096 .81 2.22 0 1.606 -.015 2.896 -.015 3.286 0 .315 .21 .69 .825 .57 C 20.565
+                22.092 24 17.592 24 12.297 c 0 -6.627 -5.373 -12 -12 -12
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="Google Scholar"
+          href="https://scholar.google.com/citations?user=ZZ92ylMAAAAJ&amp;hl=en"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Google Scholar"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 12 24 a 7 7 0 1 1 0 -14 7 7 0 0 1 0 14 z m 0 -24 L 0 9.5 l 4.838 3.35 L 12 18 l
+                7.162 -5.15 L 24 9.5 z
+              "
+            ></path>
+          </svg>
+        </a>
+        <a
+          aria-label="Twitter / X"
+          href="https://X.com/tiwarivikas0"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Twitter / X"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="
+                M 18.901 1.153 h 3.68 l -8.04 9.19 L 24 22.846 h -7.406 l -5.8 -7.584 -6.638 7.584 H
+                .474 l 8.6 -9.83 L 0 1.154 h 7.594 l 5.243 6.931 Z M 17.61 20.644 h 2.039 L 6.486
+                3.24 H 4.298 Z
+              "
+            ></path>
+          </svg>
+        </a>
       </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      © Vikas Tiwari 2025–Now | Department of Chemistry, IIT Delhi
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+      <div class="navblock">
+        <div class="navblock_text">
+          <a href="index.html">About</a><a href="research.html">Research</a
+          ><a href="publications.html">Publications</a><a href="presentations.html">Presentations</a
+          ><a aria-current="page" class="active" href="cv.html">CV</a><a href="news.html">News</a
+          ><a href="software.html">Software/Packages</a>
+        </div>
+      </div>
+      <button aria-label="Toggle dark mode" class="theme-toggle-btn" id="theme-toggle"></button>
+    </nav>
+    <main class="main-content" id="main">
+      <div class="home-shell">
+        <div class="wrapper">
+          <section class="section">
+            <div class="inner">
+              <p class="print-name">Vikas Tiwari</p>
+              <h1 class="section-title">Curriculum Vitae</h1>
+              <div class="cv-actions">
+                <a
+                  class="button"
+                  href="docs/Vikas-Tiwari-CV.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >View CV (PDF) ↗</a
+                ><a class="button" download="" href="docs/Vikas-Tiwari-CV.pdf">Download CV ↓</a>
+              </div>
+              <p class="research-overview">
+                I am a computational chemist exploring how molecular simulations, machine learning,
+              and AI can be combined to uncover chemical mechanisms and accelerate discovery. My
+              interests span machine-learned interatomic potentials, enhanced sampling, multiscale
+              modeling, and data-driven drug discovery, with a focus on building predictive models
+              for complex molecular and chemical systems.
+              </p>
+              <div class="cv-section">
+                <h3 class="cv-section-title">Education</h3>
+                <div class="cv-item">
+                  <div class="cv-date">2021 – 2026</div>
+                  <div class="cv-details">
+                    <h4>Ph.D. Computational Chemistry</h4>
+                    <p class="institution">Indian Institute of Technology Delhi</p>
+                    <p class="advisor">Thesis Advisor: Dr. Tarak Karmakar</p>
+                    <p class="gpa">CGPA: 9.50/10.0</p>
+                    <p class="thesis-title">
+                      <em>Computational Modelling of Monolayer-Protected Metal Nanoclusters: Formation,
+                      Self-Assembly, and Catalytic Mechanisms</em>
+                    </p>
+                    <p class="thesis-desc">
+                      Monolayer-protected metal nanoclusters (MPCs) are a new class of materials
+                      with atomically precise structures, enabling tuneable physicochemical
+                      properties and a broad range of applications in catalysis, biomedicine, and
+                      materials science. This thesis employs a multiscale computational approach to
+                      understand key aspects of MPC behaviour, including their formation,
+                      self-assembly, interactions with biomolecules, and catalytic mechanisms.
+                    </p>
+                  </div>
+                </div>
+                <div class="cv-item">
+                  <div class="cv-date">2018 – 2020</div>
+                  <div class="cv-details">
+                    <h4>M.Sc. Chemistry</h4>
+                    <p class="institution">Indian Institute of Technology Delhi</p>
+                    <p class="advisor">Thesis Advisor: Prof. Anil J. Elias</p>
+                    <p class="gpa">CGPA: 9.33/10.0</p>
+                    <p class="thesis-title">
+                      <em>Highly E-Selective Olefination of Methyl Substituted N-Heteroarenes with
+                      Benzyl Amines using NaCl as Catalyst and Water as Solvent</em>
+                    </p>
+                    <p class="thesis-desc">
+                      Developed a sustainable, metal-free method for highly E-selective olefination
+                      using NaCl catalyst in aqueous medium. Demonstrated broad substrate scope and
+                      green synthesis potential through in-situ aldehyde formation.
+                    </p>
+                  </div>
+                </div>
+                <div class="cv-item">
+                  <div class="cv-date">2015 – 2018</div>
+                  <div class="cv-details">
+                    <h4>B.Sc. Chemistry</h4>
+                    <p class="institution">
+                      B. K. Birla College of Commerce, Science and Arts, Kalyan, Mumbai
+                    </p>
+                    <p class="gpa">CGPA: 6.87/7.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-section">
+                <h3 class="cv-section-title">Scholarships and Awards</h3>
+                <div class="awards-grid">
+                  <div class="award-item">
+                    <span class="award-year">2024</span>
+                    <span class="award-name">Asian Young NanoScientist Presentation Award</span>
+                  </div>
+                  <div class="award-item">
+                    <span class="award-year">2021</span>
+                    <span class="award-name">Prime Minister Research Fellowship</span>
+                  </div>
+                  <div class="award-item">
+                    <span class="award-year">2020</span>
+                    <span class="award-name">CSIR-NET Junior Research Fellowship Award - All India Rank 28</span>
+                  </div>
+                  <div class="award-item">
+                    <span class="award-year">2020</span>
+                    <span class="award-name">Graduate Aptitude Test in Engineering (GATE) - All India Rank 31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-section">
+                <div class="skills-column">
+                  <h3 class="cv-section-title">Research Skills</h3>
+                  <ul class="skills-list">
+                    <li>Classical molecular dynamics simulations (Atomistic and coarse grained)</li>
+                    <li>Ab initio molecular dynamics simulations</li>
+                    <li>Enhanced sampling methods (Metadynamics, OPES, Umbrella sampling)</li>
+                    <li>Machine-learning potential-based simulations</li>
+                    <li>QM/MM molecular dynamics simulations</li>
+                    <li>Mechanistic investigation using static DFT calculations</li>
+                  </ul>
+                </div>
+                <div class="skills-column">
+                  <h3 class="cv-section-title">Technical Skills</h3>
+                  <ul class="skills-list">
+                    <li><strong>OS:</strong> Linux, Windows, macOS</li>
+                    <li>
+                      <strong>Software:</strong> GROMACS, Gaussian, VMD, OVITO, PLUMED, CP2K,
+                      DeepMD-kit, LAMMPS, Quantum ESPRESSO
+                    </li>
+                    <li><strong>Programming:</strong> Python (NumPy, Pandas, Matplotlib, ASE)</li>
+                    <li><strong>ML Frameworks:</strong> PyTorch, LibTorch</li>
+                    <li><strong>Visualization:</strong> Matplotlib, VMD, OVITO</li>
+                    <li><strong>Tools:</strong> GitHub, LaTeX, Jupyter Notebooks</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <footer class="site-footer">© 2026 Vikas Tiwari. All rights reserved.</footer>
+      </div>
+    </main>
+  </body>
 </html>

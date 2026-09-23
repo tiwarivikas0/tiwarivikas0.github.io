@@ -1,0 +1,106 @@
+{
+  "checked": "2026-09-23",
+  "publication_date_basis": "First online publication; publisher pages and Crossref metadata. Existing titles preserved.",
+  "events": [
+    {
+      "month": "2026-09",
+      "html": "Submitted a <a href=\"https://github.com/gbovolenta/comet/pull/1\">COMET pull request adding support for Allegro-NequIP, Franken, and pyACE MLIP backends</a>.",
+      "source": "https://github.com/gbovolenta/comet/pull/1"
+    },
+    {
+      "month": "2026-06",
+      "html": "Publication: <a href=\"https://doi.org/10.1002/smll.74276\">Stabilization of Ligand‐Free Small Gold Nanocluster Within a Metal–Organic Framework for Enhanced Hydrogen Evolution and Horseradish Peroxidase‐Mimicking Catalysis in Aqueous Media</a> — Small",
+      "source": "https://doi.org/10.1002/smll.74276"
+    },
+    {
+      "month": "2026-04",
+      "html": "Submitted a <a href=\"https://github.com/CSML-IIT-UCL/franken/pull/46\">Franken pull request enabling manually supplied reference atomic energies for training</a>.",
+      "source": "https://github.com/CSML-IIT-UCL/franken/pull/46"
+    },
+    {
+      "month": "2026-03",
+      "html": "Started working as a Postdoc in IIT Genova under the supervision of Prof. Michele Parrinello.",
+      "source": "User-provided milestone in news.html"
+    },
+    {
+      "month": "2026-03",
+      "html": "Publication: <a href=\"https://doi.org/10.1021/acs.chemmater.5c02698\">Aggregation-Mediated Cuprophilic Interactions Governing the Luminescence of a Cu6 Nanocluster</a> — Chemistry of Materials",
+      "source": "https://doi.org/10.1021/acs.chemmater.5c02698"
+    },
+    {
+      "month": "2026-02",
+      "html": "Completed my PhD at IIT Delhi under the supervision of Prof. Tarak Karmakar.",
+      "source": "User-provided milestone in news.html"
+    },
+    {
+      "month": "2025-12",
+      "html": "Publication: <a href=\"https://doi.org/10.1063/5.0287822\">Dynamics of gold nanocluster on MgO surface with F-center defect and its implication for CO oxidation</a> — The Journal of Chemical Physics",
+      "source": "https://doi.org/10.1063/5.0287822"
+    },
+    {
+      "month": "2025-09",
+      "html": "Publication: <a href=\"https://doi.org/10.1021/acs.jpclett.5c01929\">Multiscale Modeling Approach to Chiral Nanocluster Self-Assembly</a> — The Journal of Physical Chemistry Letters",
+      "source": "https://doi.org/10.1021/acs.jpclett.5c01929"
+    },
+    {
+      "month": "2025-05",
+      "html": "Publication: <a href=\"https://pubs.rsc.org/en/content/articlehtml/2025/sc/d5sc00421g\">Modeling catalytic reaction on ligand-protected metal nanoclusters</a> — Chemical Science",
+      "source": "https://pubs.rsc.org/en/content/articlehtml/2025/sc/d5sc00421g"
+    },
+    {
+      "month": "2025-03",
+      "html": "Publication: <a href=\"https://pubs.acs.org/doi/10.1021/acs.nanolett.5c01340\">Understanding the Mechanism of Nanocluster Formation from Machine-Learned Potential-based Simulations</a> — Nano Letters",
+      "source": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5c01340"
+    },
+    {
+      "month": "2025-02",
+      "html": "Publication: <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202412468\">Ligand‐Mediated Highly Ordered Aggregation of 5‐Mercapto‐2‐Nitrobenzoic Acid Protected Atomically Precise Silver Nanocluster</a> — Small",
+      "source": "https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202412468"
+    },
+    {
+      "month": "2025-02",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-1\">PMRF Symposium 2025</a> — IIT Hyderabad, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2024-10",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-2\">Physical Chemistry Symposium 2024</a> — IIT Bombay, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2024-09",
+      "html": "Oral presentation at <a href=\"presentations.html#presentation-3\">AsiaNANO Conference</a> — IIT Madras, Chennai, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2024-08",
+      "html": "Oral presentation at <a href=\"presentations.html#presentation-4\">ACS Fall Meeting 2024</a> — Global Virtual Symposia (Online).",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2024-02",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-5\">MD@60 JNCASR-CECAM International Conference</a> — JNCASR, Bengaluru, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2023-07",
+      "html": "Workshop Attendee at <a href=\"presentations.html#presentation-6\">Enhanced Sampling Workshop</a> — CECAM-HQ-EPFL, Lausanne, Switzerland.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2022-12",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-7\">CFOS-2022</a> — IIT Roorkee, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2022-11",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-8\">IGWYR-2022</a> — IIT Delhi, India.",
+      "source": "Existing conference record in research.html"
+    },
+    {
+      "month": "2021-12",
+      "html": "Poster presentation at <a href=\"presentations.html#presentation-9\">MMM-II Conference</a> — NISER Bhubaneswar (Online).",
+      "source": "Existing conference record in research.html"
+    }
+  ]
+}
