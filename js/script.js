@@ -21,102 +21,94 @@
     if (event.key === 'theme' || event.key === null) applyTheme(getTheme());
   });
 
- const loadSelectedPublications = async () => {
-  const container = document.getElementById('selected-publications');
-  if (!container) return;
+  const loadSelectedPublications = async () => {
+    const container = document.getElementById('selected-publications');
+    if (!container) return;
 
-  try {
-    const response = await fetch('publications.html', {
-      cache: 'no-cache'
-    });
-
-    if (!response.ok) {
-      throw new Error('Could not load publications.html');
-    }
-
-    const html = await response.text();
-    const source = new DOMParser().parseFromString(html, 'text/html');
-
-    const papers = [...source.querySelectorAll('.publication-item')];
-
-    console.log('Total publications found:', papers.length);
-
-    const selected = papers
-      .map((paper, position) => {
-
-        const authors =
-          paper.querySelector('p strong')?.textContent.trim() || '';
-
-        // First name before comma
-        const firstAuthor = authors
-          .split(',')[0]
-          .replace(/\*/g, '')
-          .trim();
-
-        // Find year such as 2022, 2024, 2026
-        const yearMatch = paper.textContent.match(/\b(20\d{2})\b/);
-
-        const year = yearMatch
-          ? Number(yearMatch[1])
-          : 0;
-
-        console.log({
-          firstAuthor,
-          year,
-          authors
-        });
-
-        return {
-          paper,
-          position,
-          firstAuthor,
-          year
-        };
-      })
-
-      // Your first-author publications
-      .filter(({ firstAuthor }) =>
-        /^V\s*Tiwari$/i.test(firstAuthor) ||
-        /^V\.?\s*Tiwari$/i.test(firstAuthor) ||
-        /^Vikas\s+Tiwari$/i.test(firstAuthor)
-      )
-
-      // newest first
-      .sort((a, b) =>
-        b.year - a.year || a.position - b.position
-      )
-
-      // only latest 3
-      .slice(0, 3)
-
-      .map(({ paper }) => {
-        const copy = paper.cloneNode(true);
-
-        copy.removeAttribute('id');
-
-        copy.querySelectorAll('[id]').forEach(el => {
-          el.removeAttribute('id');
-        });
-
-        return copy;
+    try {
+      const response = await fetch('publications.html', {
+        cache: 'no-cache',
       });
 
-    console.log('First-author publications found:', selected.length);
+      if (!response.ok) {
+        throw new Error('Could not load publications.html');
+      }
 
-    if (selected.length) {
-      container.replaceChildren(...selected);
-    } else {
-      container.innerHTML =
-        '<p><a href="publications.html">View publications →</a></p>';
+      const html = await response.text();
+      const source = new DOMParser().parseFromString(html, 'text/html');
+
+      const papers = [...source.querySelectorAll('.publication-item')];
+
+      console.log('Total publications found:', papers.length);
+
+      const selected = papers
+        .map((paper, position) => {
+          const authors =
+            (
+              paper.querySelector('.authors') || paper.querySelector('p strong')
+            )?.textContent.trim() || '';
+
+          // First name before comma
+          const firstAuthor = authors.split(',')[0].replace(/\*/g, '').trim();
+
+          // Find year such as 2022, 2024, 2026
+          const yearMatch = paper.textContent.match(/\b(20\d{2})\b/);
+
+          const year = yearMatch ? Number(yearMatch[1]) : 0;
+
+          console.log({
+            firstAuthor,
+            year,
+            authors,
+          });
+
+          return {
+            paper,
+            position,
+            firstAuthor,
+            year,
+          };
+        })
+
+        // Your first-author publications
+        .filter(
+          ({ firstAuthor }) =>
+            /^V\s*Tiwari$/i.test(firstAuthor) ||
+            /^V\.?\s*Tiwari$/i.test(firstAuthor) ||
+            /^Vikas\s+Tiwari$/i.test(firstAuthor),
+        )
+
+        // newest first
+        .sort((a, b) => b.year - a.year || a.position - b.position)
+
+        // only latest 3
+        .slice(0, 3)
+
+        .map(({ paper }) => {
+          const copy = paper.cloneNode(true);
+
+          copy.removeAttribute('id');
+
+          copy.querySelectorAll('[id]').forEach((el) => {
+            el.removeAttribute('id');
+          });
+
+          return copy;
+        });
+
+      console.log('First-author publications found:', selected.length);
+
+      if (selected.length) {
+        container.replaceChildren(...selected);
+      } else {
+        container.innerHTML = '<p><a href="publications.html">View publications →</a></p>';
+      }
+    } catch (error) {
+      console.error('Publication loading error:', error);
+
+      container.innerHTML = '<p><a href="publications.html">View publications →</a></p>';
     }
-
-  } catch (error) {
-    console.error('Publication loading error:', error);
-
-    container.innerHTML =
-      '<p><a href="publications.html">View publications →</a></p>';
-  }
-};
+  };
 
   document.addEventListener('DOMContentLoaded', () => {
     loadSelectedPublications();

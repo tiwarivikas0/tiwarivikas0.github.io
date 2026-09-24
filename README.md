@@ -4,7 +4,7 @@ Static HTML/CSS/JavaScript site for GitHub Pages. No build step is needed.
 
 ## Preview
 
-Run `python -m http.server 8000` in this directory, then open http://localhost:8000.
+Run `python -m http.server 8001` in this directory, then open http://localhost:8001.
 
 ## Content
 
@@ -28,9 +28,16 @@ Related publications use native HTML disclosures, so they also work without
 JavaScript. When updating papers, update their related lists on Research as needed.
 The About page automatically loads its three newest first-author papers from
 `publications.html`. Add papers to the appropriate `.publication-year` section and
-keep papers within each year ordered newest first. Put the author list in the
-first `<strong>` inside the paper's `<p>`; `V Tiwari`, `V. Tiwari`, `Vikas Tiwari`,
-and `Tiwari, V` are recognized when listed first. No separate About-page edit is
+keep papers within each year ordered newest first. Put the full author list in
+`<span class="authors">` inside the paper's `<p>`, and wrap only your name in
+`<strong>`, for example:
+
+```html
+<span class="authors"><strong>V Tiwari</strong>, Dhananjay, T Karmakar*</span>
+```
+
+`V Tiwari`, `V. Tiwari`, and `Vikas Tiwari` are recognized when listed first.
+The selection reads the full author list, not just the bold name. No separate About-page edit is
 needed. If loading fails or JavaScript is disabled, a link to Publications remains
 available. Preview through the local server above rather than opening `index.html`
 directly as a file.
